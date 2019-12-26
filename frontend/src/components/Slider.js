@@ -18,24 +18,24 @@ const Slider = ({
   slides,
 }) => (
     <div id="cases" className="container-fluid slider-block py-5" >
-      <div className="container py-5 my-5">
+      <div className="container py-5">
         <ReactSlider {...settings}>
-          {slides.map(s => (
-            <div className="slide">
+          {slides.map((slide, i) => (
+            <div className="slide" key={i}>
               <div className="row">
                 <div className="col-md-12 mb-5">
-                  <h1>{s.title}</h1>
-                  <h3>{s.subtitle}</h3>
+                  <h1>{slide.title}</h1>
+                  <h3>{slide.subtitle}</h3>
                 </div>
                 <div className="col-md-6">
-                  <img src={s.illustration.asset.url} className="img-fluid" alt="slide" />
+                  <img src={slide.illustration.asset.url} className="img-fluid" alt="slide" />
                 </div>
                 <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
                   <div className="w-100 px-5 my-4">
-                    {s.descriptionRaw && <BlockContent blocks={s.descriptionRaw} />}
+                    {slide.descriptionRaw && <BlockContent blocks={slide.descriptionRaw} />}
                   </div>
                   <div className="w-100 px-5 text-center">
-                    {s.buttonurl && <Link className="btn btn-light" to={s.buttonurl}> {s.buttontext} </Link> }
+                    {slide.buttonurl && <Link className="btn btn-light" to={slide.buttonurl}> {slide.buttontext} </Link> }
                   </div>
                 </div>
               </div>

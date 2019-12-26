@@ -16,13 +16,13 @@ const SiteFooter = ({sanity, items = [], theme }) => (
             </div>
             <div className="footer-top-title my-3">Følg os</div>
             <div className="footer-social">
-              <a href={sanity.siteExtra[0].linkedin ? sanity.siteExtra[0].linkedin : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
+              <a href={sanity.company.contact.linkedin ? sanity.company.contact.linkedin : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </a>
-              <a href={sanity.siteExtra[0].facebook ? sanity.siteExtra[0].facebook : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
+              <a href={sanity.company.contact.facebook ? sanity.company.contact.facebook : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
-              <a href={sanity.siteExtra[0].whatsapp ? sanity.siteExtra[0].whatsapp : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
+              <a href={sanity.company.contact.whatsapp ? sanity.company.contact.whatsapp : '#'} className="footer-icon" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp />
               </a>
             </div>

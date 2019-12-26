@@ -74,7 +74,7 @@ const SiteNav = ({
             <a href={contact.whatsapp ? contact.whatsapp : '#'} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
-            <a href={contact.email ? contact.email : '#'} target="_blank" rel="noopener noreferrer">
+            <a href={contact.email ? 'mailto:' + contact.email : '#'} rel="noopener noreferrer">
               <FaEnvelope />
             </a>
           </span>

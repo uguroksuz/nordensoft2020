@@ -11,17 +11,17 @@ const CardText = styled.div`
 
 const LinkCardGrid = ({ headline, items, theme }) => (
 
-  <div class="container py-5">
+  <div className="container py-5">
     <h2>{headline}</h2>
-    <div class="row">
-      <div class="col col-xs-12">
-        <div class="blog-grids">
+    <div className="row">
+      <div className="col col-xs-12">
+        <div className="blog-grids">
           {items.map(item => (
-            <div class="grid" key={item.key}>
-              <div class="entry-media" theme={theme}>
+            <div className="grid" key={item.key}>
+              <div className="entry-media" theme={theme}>
                 {item.image && <img src={item.image.src} alt="" />}
               </div>
-              <div class="entry-body">
+              <div className="entry-body">
                 <Link to={item.to}>
                   <h3>{item.title}</h3>
                 </Link>

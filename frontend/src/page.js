@@ -49,7 +49,7 @@ import CasesCollection from './components/CasesCollection'
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
     {theme => (
-      <ModalStackProvider key={'1'}>
+      <ModalStackProvider>
         {modalStackDepth => (
           <Layout overlay={modalStackDepth > 0} class={(pageContext.page.customClass != null) ? pageContext.page.customClass : null}>
             {pageContext.page.customClass}
@@ -58,7 +58,7 @@ const Page = ({ pageContext = {} }) => (
               !pageContext.page.sections && <div>No sections</div>}
             {pageContext.page &&
               pageContext.page.sections &&
-              pageContext.page.sections.map(section => {
+              pageContext.page.sections.map((section, i)=> {
                 const { __typename, referencedSection = {} } = section
                 switch (__typename) {
                   default:
@@ -66,7 +66,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_Article':
                         return (
                           <Article
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapArticleToProps(section)}
                           />
@@ -74,7 +74,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_Persons':
                         return (
                           <Persons
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPersonsToProps(section)}
                           />
@@ -82,7 +82,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_Slider':
                         return (
                           <Slider
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapSliderToProps(section)}
                           />
@@ -90,7 +90,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_LeftImageArticle':
                         return (
                           <LeftImageArticle
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapLeftImageArticleToProps(section)}
                           />
@@ -98,7 +98,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_RightImageArticle':
                         return (
                           <RightImageArticle
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapRightImageArticleToProps(section)}
                           />
@@ -106,7 +106,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_PageHeader':
                         return (
                           <PageHeader
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPageHeaderToProps(section)}
                           />
@@ -114,7 +114,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_CenterArticle':
                         return (
                           <CenterArticle
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapCenterArticleToProps(section)}
                           />
@@ -122,7 +122,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_CenterImageLayout':
                         return (
                           <CenterImageLayout
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapCenterImageLayoutToProps(section)}
                           />
@@ -130,7 +130,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_LetterDefinition':
                         return (
                           <LetterDefinition
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapLetterDefinitionToProps(section)}
                           />
@@ -138,7 +138,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_Definition':
                         return (
                           <Definition
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapDefinitionToProps(section)}
                           />
@@ -146,7 +146,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_CustomersBlock':
                         return (
                           <CustomersBlock
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapCustomersBlockToProps(section)}
                           />
@@ -154,7 +154,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_Hero':
                         return (
                           <Hero
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             {...mapSharedHeroToHeroProps(section)}
                             theme={theme}
                           />
@@ -162,7 +162,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_LatestUpdates':
                         return (
                           <LatestUpdates
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             {...mapSharedLatestUpdatedToLatestUpdatedProps(
                               section
                             )}
@@ -171,7 +171,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_FeatureCollection':
                         return (
                           <FeatureDetailList
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             {...mapSharedFeatureCollectionToFeatureCollectionProps(
                               section
                             )}
@@ -182,14 +182,14 @@ const Page = ({ pageContext = {} }) => (
                           case 'mainNav':
                             return (
                               <SiteNav
-                                key={section._key}
+                                key={section._key ? section._key : i}
                                 {...mapSharedNavigationToSiteNavProps(section)}
                               />
                             )
                           case 'footerNav':
                             return (
                               <SiteFooter
-                                key={section._key}
+                                key={section._key ? section._key : i}
                                 {...mapSharedNavigationToSiteFooterProps(
                                   section
                                 )}
@@ -197,7 +197,7 @@ const Page = ({ pageContext = {} }) => (
                             )
                           default:
                             return (
-                              <div key={section._key}>
+                              <div key={section._key ? section._key : i}>
                                 Unknown navigation id: {section.id} (try <code>mainNav</code> or <code>footer</code>)
                               </div>
                             )
@@ -205,7 +205,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_TestimonialCollection':
                         return (
                           <TestimonialCarousel
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             {...mapTestimonialCollectionToTestimonialCarouselProps(
                               section
                             )}
@@ -214,7 +214,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_CallToAction':
                         return (
                           <CallToAction
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             {...mapSharedCallToActionToCallToActionProps(
                               section
                             )}
@@ -242,7 +242,7 @@ const Page = ({ pageContext = {} }) => (
                         case 'SANITY_SharedPersons':
                         return (
                           <Persons
-                            key={section._key}
+                            key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPersonsToProps(section)}
                           />
@@ -258,7 +258,7 @@ const Page = ({ pageContext = {} }) => (
                       case 'SANITY_SharedCasesCollection':
                         return (
                           <CasesCollection
-                            key={referencedSection._id}
+                            key={referencedSection._id ? referencedSection._id : i}
                             {...mapSharedCasesCollectionProps(referencedSection)}
                             theme={theme}
                           />
@@ -266,7 +266,7 @@ const Page = ({ pageContext = {} }) => (
                         case 'SANITY_SharedLetterDefinition':
                           return (
                             <LetterDefinition
-                              key={section._key}
+                              key={section._key ? section._key : i}
                               theme={theme}
                               {...mapLetterDefinitionToProps(section)}
                             />
@@ -274,7 +274,7 @@ const Page = ({ pageContext = {} }) => (
                         case 'SANITY_SharedDefinition':
                           return (
                             <Definition
-                              key={section._key}
+                              key={section._key ? section._key : i}
                               theme={theme}
                               {...mapDefinitionToProps(section)}
                             />

@@ -26,6 +26,16 @@ export default {
       title: "Twitter"
     },
     {
+      name: "whatsapp",
+      type: "string",
+      title: "Whatsapp"
+    },
+    {
+      name: "linkedin",
+      type: "string",
+      title: "Linkedin"
+    },
+    {
       name: "instagram",
       type: "string",
       description: "Full Instagram URL",
@@ -33,13 +43,13 @@ export default {
     },
     {
       name: "facebook",
-      type: "url",
+      type: "string",
       description: "Full Facebook Page URL",
       title: "Facebook Page"
     },
     {
       name: "crunchbase",
-      type: "url",
+      type: "string",
       description: "Full Crunchbase URL",
       title: "Crunchbase"
     }

@@ -23,6 +23,13 @@ class Layout extends React.Component {
                 title
                 description
                 keywords
+                schema
+                googletagmanager
+                analytics
+                yandex
+                bing
+                yahoo
+                hreflang
                 ogImage {
                   asset {
                     url
@@ -49,8 +56,16 @@ class Layout extends React.Component {
                 style: { background: theme.background, color: theme.color }
               }}
             >
-              <html lang="en" />
+              <html lang={data.sanity.allSiteSeoSettings[0].hreflang} />
               <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
+              
+              <script> 
+                { data.sanity.allSiteSeoSettings[0].schema ?  data.sanity.allSiteSeoSettings[0].schema : null} 
+              </script>
+              <script> 
+                { data.sanity.allSiteSeoSettings[0].googletagmanager ? data.sanity.allSiteSeoSettings[0].googletagmanager : null} 
+              </script>
+              
             </Helmet>
             <div className={`pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
               {children}

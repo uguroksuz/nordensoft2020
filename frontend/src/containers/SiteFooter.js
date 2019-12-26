@@ -27,6 +27,13 @@ const query = graphql`
           _key
         }
       }
+      company: CompanyInfo(id: "company-info") {
+        contact {
+          facebook
+          whatsapp
+          linkedin
+        }
+      }
     }
   }
 `

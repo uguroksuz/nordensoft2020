@@ -15,8 +15,8 @@ const LetterDefinition = ({
           </div>
         </div>
         <div className="row pt-5 pb-5  mt-5">
-          {cases.map(q => (
-            <div className="col-md-4">
+          {cases.map((q, i) => (
+            <div className="col-md-4" key={i}>
               <img src={q.illustration.asset.url} className="attachment-full size-full img-fluid" alt="BMW Shop Turkey" />
               <h4><a href={q.url} target="_blank" rel="noopener noreferrer" data-slimstat="5">{q.title}</a></h4>
             </div>

@@ -23,6 +23,8 @@ const query = graphql`
         telephone
         twitter
         crunchbase
+        whatsapp
+        linkedin
       }
     }
   }

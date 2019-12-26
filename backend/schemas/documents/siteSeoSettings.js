@@ -38,6 +38,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'schema',
+      title: 'Schema.org',
+      type: 'text'
+    },
+    {
+      name: 'googletagmanager',
+      title: 'Google Tag Manager',
+      type: 'text'
+    },
+    {
       name: 'analytics',
       title: 'Google Analytics',
       type: 'string'
