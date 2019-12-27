@@ -18,7 +18,7 @@ const Slider = ({
   slides,
 }) => (
     <div id="cases" className="container-fluid slider-block py-5" >
-      <div className="container py-5">
+      <div className="container py-3">
         <ReactSlider {...settings}>
           {slides.map((slide, i) => (
             <div className="slide" key={i}>

@@ -44,7 +44,7 @@ const SiteFooter = ({sanity, items = [], theme }) => (
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-left">
-            © 2016 – {new Date().getFullYear()} NordenSoft by Development  | <Link to="/privacypolicy">Privatlivspolitik</Link> | <Link to="/terms">Vilkår og betingelser</Link>
+            © 2016 – {new Date().getFullYear()} NordenSoft by Development  | <Link to="/privacypolicy">Privatlivspolitik</Link>
           </div>
           <div className="col-md-6 text-right">
             © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a> &amp;

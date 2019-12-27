@@ -11,6 +11,7 @@ const query = graphql`
         title
         publishedAt
         contentRaw
+        introRaw
         slug {
           current
         }
@@ -36,7 +37,8 @@ function mapDataToProps({sanity}) {
       publishedAt: post.publishedAt,
       to: `/blog/${post.slug.current}/`,
       introBlockContent: null,
-      image: post.featuredImage ? { src: post.featuredImage.asset.url } : null
+      image: post.featuredImage ? { src: post.featuredImage.asset.url } : null,
+      text: post.introRaw,
     })),
     moreLink: {
       title: "See more",
