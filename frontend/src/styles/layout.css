@@ -634,7 +634,7 @@ a:hover {
 .blog-head-title {
   text-align: center;
   font-family: Recoleta,sans-serif;
-  font-size: 3.375rem;
+  font-size: 2.575rem;
 }
 
 .blog-head-title span {
@@ -642,6 +642,12 @@ a:hover {
   text-align: center;
   font-family: Recoleta,sans-serif;
   width: 100%;
+}
+
+.blog-single-content {
+  max-width: 42.5rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
 .threeblock {

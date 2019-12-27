@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from "gatsby"
 import React from "react"
-import Article from "./components/Article"
-import LatestUpdates from "./containers/LatestUpdates"
+// import Article from "./components/Article"
+import BlogPostList from "./containers/BlogPostList"
 import Layout from "./containers/Layout"
 import SiteNav from "./containers/SiteNav"
 import SiteFooter from "./containers/SiteFooter"
@@ -9,6 +9,8 @@ import ScrollTop from './components/scrollTop'
 import FloatForm from './components/floatForm'
 import ModalStackProvider from "./providers/ModalStack"
 import ThemeProvider from "./providers/Theme"
+import BlockContent from "@sanity/block-content-to-react"
+
 import {
   mapSharedNavigationToSiteNavProps,
   mapSharedNavigationToSiteFooterProps
@@ -63,20 +65,20 @@ const query = graphql`
   }
 `
 
-function mapPageContextToArticleProps(data) {
-  return {
-    headline: data.post.title,
-    introBlockContent: data.post.introRaw,
-    publishedAt: data.post.publishedAt,
-    blockContent: data.post.contentRaw,
-    media: data.post.featuredImage
-      ? {
-          type: "image",
-          src: data.post.featuredImage.asset.url
-        }
-      : null
-  }
-}
+// function mapPageContextToArticleProps(data) {
+//   return {
+//     headline: data.post.title,
+//     introBlockContent: data.post.introRaw,
+//     publishedAt: data.post.publishedAt,
+//     blockContent: data.post.contentRaw,
+//     media: data.post.featuredImage
+//       ? {
+//         type: "image",
+//         src: data.post.featuredImage.asset.url
+//       }
+//       : null
+//   }
+// }
 
 function mapAllSharedNavigationsToPropsObject(data) {
   return data.sanity.allSharedNavigations.reduce((obj, d) => {
@@ -104,8 +106,29 @@ const Page = ({ pageContext = {} }) => (
               return (
                 <Layout overlay={modalStackDepth > 0}>
                   <SiteNav {...obj.mainNav} />
-                  <Article {...mapPageContextToArticleProps(pageContext)} />
-                  <LatestUpdates headline="Latest blog posts" invert />
+                  {/* <Article {...mapPageContextToArticleProps(pageContext)} /> */}
+                  <div className="container">
+                    <div className="row">
+                      <div className={'col-md-12 py-5 mt-5'}>
+                        <div className="row">
+                          <div className="entry-body col-md-6">
+                            <h1 className="mb-4">{pageContext.post.title}</h1>
+                            <div>
+                              {pageContext.post.introRaw && <BlockContent blocks={pageContext.post.introRaw} />}
+                            </div>
+                          </div>
+                          <div className="entry-media col-md-6" theme={theme}>
+                            {pageContext.post.featuredImage.asset.url && <img src={pageContext.post.featuredImage.asset.url} alt={pageContext.post.title} />}
+                          </div>
+                        </div>
+                        <hr className="my-5" />
+                      </div>
+                      <div className="col-md-12 blog-single-content">
+                        {pageContext.post.contentRaw && <BlockContent blocks={pageContext.post.contentRaw} />}
+                      </div>
+                    </div>
+                  </div>
+                  <BlogPostList headline="Latest blog posts" invert />
                   <ScrollTop />
                   <FloatForm />
                   <SiteFooter {...obj.footerNav} />

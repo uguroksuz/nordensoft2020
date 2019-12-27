@@ -13,7 +13,7 @@ const CardText = styled.div`
 const LinkCardGrid = ({ headline, items, theme }) => (
 
   <div className="container py-5">
-    <h2 className="blog-head-title py-5">{headline}</h2>
+    <h2 className="blog-head-title py-5"> — {headline} — </h2>
     <div className="row">
       <div className={'col-md-12 mb-5'}>
         <Link to={items[0].to} className="entry head-entry">
