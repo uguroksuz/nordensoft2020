@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import "../styles/bootstrap.min.css"
 import "../styles/layout.css"
-import "./base.css"
+// import "./base.css"
 
 
 class Layout extends React.Component {
