@@ -67,7 +67,7 @@ class Layout extends React.Component {
               </script>
               
             </Helmet>
-            <div className={`pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
+            <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
               {children}
             </div>
           </>

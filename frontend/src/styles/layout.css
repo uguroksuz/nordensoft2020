@@ -28,6 +28,10 @@ a:hover {
   text-decoration: none;
 }
 
+.page-wrap {
+  padding-top: 70px !important;
+}
+
 .about{
   background: #e4e9d6;
 }
