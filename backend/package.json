@@ -35,7 +35,7 @@
     "react": "^16.2",
     "react-dom": "^16.2",
     "react-twitter-embed": "^2.0.4",
-    "sanity-plugin-table": "^1.0.1"
+    "sanity-plugin-datatable": "^1.0.5"
   },
   "devDependencies": {
     "prettier": "^1.15.3"

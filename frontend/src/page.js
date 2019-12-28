@@ -16,6 +16,7 @@ import {
   mapArticleToProps,
   mapSliderToProps,
   mapPersonsToProps,
+  mapTableSectionToProps,
   mapPageHeaderToProps,
   mapCenterArticleToProps,
   mapLeftImageArticleToProps,
@@ -32,7 +33,8 @@ import {
   mapSharedNavigationToSiteNavProps,
   mapSharedNavigationToSiteFooterProps,
   mapTestimonialCollectionToTestimonialCarouselProps,
-  mapSharedCallToActionToCallToActionProps
+  mapSharedCallToActionToCallToActionProps,
+  mapSharedTableSectionToProps
 } from './lib/mapToProps'
 import Article from './components/Article'
 import Slider from './components/Slider'
@@ -47,6 +49,7 @@ import LeftImageArticle from './components/LeftImageArticle'
 import RightImageArticle from './components/RightImageArticle'
 import CasesCollection from './components/CasesCollection'
 import PlansCollection from './components/PlansCollection'
+import TableSection from './components/TableSection'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -79,6 +82,14 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPersonsToProps(section)}
+                          />
+                        )
+                      case 'SANITY_TableSection':
+                        return (
+                          <TableSection
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapTableSectionToProps(section)}
                           />
                         )
                       case 'SANITY_Slider':
@@ -241,13 +252,21 @@ const Page = ({ pageContext = {} }) => (
                             theme={theme}
                           />
                         )
-                        case 'SANITY_SharedPersons':
+                      case 'SANITY_SharedPersons':
                         return (
                           <Persons
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPersonsToProps(section)}
                           />
+                        )
+                      case 'SANITY_SharedTableSection':
+                        return (
+                          <TableSection
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapSharedTableSectionToProps(referencedSection)}
+                            />
                         )
                       case 'SANITY_SharedSlider':
                         return (

@@ -16,7 +16,7 @@
     "@sanity/desk-tool",
     "@sanity/color-input",
     "@sanity/vision",
-    "table"
+    "datatable"
   ],
   "parts": [
     {

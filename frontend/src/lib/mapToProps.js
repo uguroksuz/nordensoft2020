@@ -36,6 +36,14 @@ export function mapCustomersBlockToProps ({title, sections}){
     sections: sections,
   }
 }
+export function mapTableSectionToProps ({title, description, customclass, myAwesomeTable}){
+  return{
+    headline: title,
+    description: description,
+    customclass: customclass,
+    rows: myAwesomeTable.rows
+  }
+}
 export function mapLeftImageArticleToProps ({title, bodyRaw, image = null}){
   let i = (image != null) ? image.asset.url : null;
   return{
@@ -196,6 +204,16 @@ export function mapSharedPlansCollectionProps (data) {
     _source: data
   }
 }
+
+export function mapSharedTableSectionToProps ({title, description, customclass, myAwesomeTable}){
+  return{
+    headline: title,
+    description: description,
+    customclass: customclass,
+    rows: myAwesomeTable.rows
+  }
+}
+
 
 export function mapSharedHeroToHeroProps ({ title, tagLineRaw, ctas = [] }) {
   return {

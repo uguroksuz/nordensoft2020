@@ -1,7 +1,7 @@
 export default {
-  name: 'tableContent',
+  name: 'tableSection',
   type: 'document',
-  title: 'Table Content',
+  title: 'Table Section',
   fields: [
     {
       name: 'title',
@@ -12,12 +12,12 @@ export default {
     {
       name: 'description',
       type: 'text',
-      title: 'description'
+      title: 'Desctiption'
     },
     {
-      name: 'sizeChart',
-      title: 'Size Chart',
-      type: 'table', // Specify table type
+      name: 'myAwesomeTable',
+      title : 'Table',
+      type: 'table'
     },
     {
       name: 'customclass',

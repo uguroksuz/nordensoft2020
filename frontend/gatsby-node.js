@@ -71,6 +71,21 @@ exports.createPages = async ({ actions, graphql }) => {
                     }
                   }
                 }
+                ... on SANITY_SharedTableSection {
+                  _key
+                  title
+                  description
+                  customclass
+                  myAwesomeTable {
+                    _key
+                    _type
+                    rows {
+                      cells
+                      _type
+                      _key
+                    }
+                  }
+                }
                 ... on SANITY_SharedSlider {
                   _key
                   _type
@@ -389,6 +404,21 @@ exports.createPages = async ({ actions, graphql }) => {
                       label
                     }
                   }
+                }
+              }
+            }
+            ... on SANITY_TableSection {
+              _key
+              title
+              description
+              customclass
+              myAwesomeTable {
+                _key
+                _type
+                rows {
+                  cells
+                  _type
+                  _key
                 }
               }
             }
