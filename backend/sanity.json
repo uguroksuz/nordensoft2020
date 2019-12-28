@@ -15,7 +15,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/color-input",
-    "@sanity/vision"
+    "@sanity/vision",
+    "table"
   ],
   "parts": [
     {

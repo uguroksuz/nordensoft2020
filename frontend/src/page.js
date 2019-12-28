@@ -54,7 +54,7 @@ const Page = ({ pageContext = {} }) => (
       <ModalStackProvider>
         {modalStackDepth => (
           <Layout overlay={modalStackDepth > 0} class={(pageContext.page.customClass != null) ? pageContext.page.customClass : null}>
-            {pageContext.page.customClass}
+            {/* {pageContext.page.customClass} */}
             {!pageContext.page && <div>No data</div>}
             {pageContext.page &&
               !pageContext.page.sections && <div>No sections</div>}

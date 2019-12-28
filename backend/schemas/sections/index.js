@@ -1,4 +1,5 @@
 export { default as article } from "./article"
+export { default as tableContent } from "./tableContent"
 export { default as callToAction } from "./callToAction"
 export { default as hero } from "./hero"
 export { default as latestUpdates } from "./latestUpdates"

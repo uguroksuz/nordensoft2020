@@ -565,7 +565,7 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
 
   data.sanity.allPosts.forEach(post => {
-    console.log("post", post.slug.current)
+    // console.log("post", post.slug.current)
     actions.createPage({
       path: `/blog/${post.slug.current}/`,
       component: path.resolve(`./src/post.js`),
@@ -577,7 +577,7 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   data.sanity.allRoutes.forEach(({ _id, slug, page }) => {
-    console.log("route", slug.current)
+    // console.log("route", slug.current)
     actions.createPage({
       path: slug.current === "/" ? "/" : `/${slug.current}/`,
       component: path.resolve(`./src/page.js`),
