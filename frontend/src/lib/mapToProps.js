@@ -185,6 +185,17 @@ export function mapSharedCasesCollectionProps (data) {
     _source: data
   }
 }
+export function mapSharedPlansCollectionProps (data) {
+  const { title, plans = [] } = data
+  return {
+    headline: title,
+    plans: (plans || []).map(q => ({
+      title: q.title,
+      url: q.url,
+    })),
+    _source: data
+  }
+}
 
 export function mapSharedHeroToHeroProps ({ title, tagLineRaw, ctas = [] }) {
   return {

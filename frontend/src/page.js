@@ -27,6 +27,7 @@ import {
   mapSharedHeroToHeroProps,
   mapSharedFeatureCollectionToFeatureCollectionProps,
   mapSharedCasesCollectionProps,
+  mapSharedPlansCollectionProps,
   mapSharedLatestUpdatedToLatestUpdatedProps,
   mapSharedNavigationToSiteNavProps,
   mapSharedNavigationToSiteFooterProps,
@@ -45,6 +46,7 @@ import CustomersBlock from './components/CustomersBlock'
 import LeftImageArticle from './components/LeftImageArticle'
 import RightImageArticle from './components/RightImageArticle'
 import CasesCollection from './components/CasesCollection'
+import PlansCollection from './components/PlansCollection'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -260,6 +262,14 @@ const Page = ({ pageContext = {} }) => (
                           <CasesCollection
                             key={referencedSection._id ? referencedSection._id : i}
                             {...mapSharedCasesCollectionProps(referencedSection)}
+                            theme={theme}
+                          />
+                        )
+                      case 'SANITY_SharedPlanCollection':
+                        return (
+                          <PlansCollection
+                            key={referencedSection._id ? referencedSection._id : i}
+                            {...mapSharedPlansCollectionProps(referencedSection)}
                             theme={theme}
                           />
                         )

@@ -1,7 +1,7 @@
 import React from "react"
 import BlockContent from "@sanity/block-content-to-react"
 
-const LetterDefinition = ({
+const CasesCollection = ({
   headline,
   blockContent,
   cases,
@@ -26,7 +26,7 @@ const LetterDefinition = ({
     </div>
   );
 
-export default LetterDefinition
+export default CasesCollection
 
 
 

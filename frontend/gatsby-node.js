@@ -245,6 +245,24 @@ exports.createPages = async ({ actions, graphql }) => {
                   bodyRaw
                   title
                 }
+                ... on SANITY_SharedPlanCollection {
+                  _key
+                  _type
+                  title
+                  plans {
+                    price
+                    features {
+                      ... on SANITY_KeyValue {
+                        _key
+                        _type
+                        key
+                        value
+                      }
+                    }
+                    priceType
+                    title
+                  }
+                }
                 ... on SANITY_SharedTestimonialCollection {
                   _id
                   _type
@@ -520,6 +538,24 @@ exports.createPages = async ({ actions, graphql }) => {
               _key
               bodyRaw
               title
+            }
+            ... on SANITY_PlanCollection {
+              _key
+              _type
+              title
+              plans {
+                price
+                features {
+                  ... on SANITY_KeyValue {
+                    _key
+                    _type
+                    key
+                    value
+                  }
+                }
+                priceType
+                title
+              }
             }
           }
         }
