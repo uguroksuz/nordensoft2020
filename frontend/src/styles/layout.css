@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body{
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  /* font-family: 'Quicksand', sans-serif; */
-  /* font-family: 'Comfortaa'; */
   font-family: Poppins,sans-serif;
   color: #000000;/*505c5f*/
 }
@@ -29,6 +26,15 @@ a:hover {
   text-decoration: none;
 }
 
+.font-2rem {
+  font-size: 2rem !important;
+}
+.sub-title {
+  font-size: 1rem !important;
+  text-align: center;
+  width: 100%;
+}
+
 .padding-zero {
   padding: 0 !important;
 }
@@ -44,8 +50,9 @@ a:hover {
 }
 
 .single-page-header h1 {
-  max-width: 250px;
+  max-width: 300px;
   text-align: end;
+  font-size: 2rem;
 }
 
 .single-page-header .single-page-subtitle{

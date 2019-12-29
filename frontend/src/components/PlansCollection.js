@@ -9,7 +9,7 @@ const PlansCollection = ({
       <div className="container text-center pt-5 ">
         <div className="row">
           <div className="col-md-12">
-            <h1> — {headline} — </h1>
+            <h1 className="font-2rem"> {headline} </h1>
           </div>
         </div>
         <div id="generic_price_table">
@@ -17,7 +17,7 @@ const PlansCollection = ({
             {/* <!--BLOCK ROW START--> */}
             <div className="row">
               {_source.plans.map((plan, i) => (
-                <div className="col-md-4">
+                <div className="col-md-4" key={i}>
                   {/* <!--PRICE CONTENT START--> */}
                   <div className={`generic_content ${ i === 1 ? 'active' : '' } clearfix`}>
                     {/* <!--HEAD PRICE DETAIL START--> */}
@@ -47,8 +47,8 @@ const PlansCollection = ({
                     {/* <!--FEATURE LIST START--> */}
                     <div className="generic_feature_list">
                       <ul>
-                        {plan.features.map(feature => (
-                          <li>{feature.value}</li>
+                        {plan.features.map((feature, i) => (
+                          <li key={i}>{feature.value}</li>
                         ))}
                       </ul>
                     </div>

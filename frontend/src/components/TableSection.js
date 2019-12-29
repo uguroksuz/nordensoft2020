@@ -11,13 +11,13 @@ const TableSection = ({
       <div className="container text-center pt-5 ">
         <div className="row">
           <div className="col-md-12">
-            <div className="h2"> — {headline} — </div>
+            <div className="h2 font-2rem"> {headline} </div>
             <div>{description}</div>
           </div>
         </div>
         <div id="generic_price_table">
           <div className="container">
-            <table class="table">
+            <table className="table">
               {/* <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -30,8 +30,8 @@ const TableSection = ({
                 {rows.map((row, i) => (
                   <tr key={i}>
                     {row.cells.map((cell, i) => (
-                      i == 0 ? <th scope="row" key={i}>{cell}</th> :
-                      <td>{cell}</td>
+                      i === 0 ? <th scope="row" key={i}>{cell}</th> :
+                      <td key={i}>{cell}</td>
                     ))}
                   </tr>
                 ))}

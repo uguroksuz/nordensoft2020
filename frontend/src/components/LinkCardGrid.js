@@ -13,7 +13,8 @@ const CardText = styled.div`
 const LinkCardGrid = ({ headline, items, theme }) => (
 
   <div className="container py-5">
-    <h2 className="blog-head-title py-5"> — {headline} — </h2>
+    <h1 className="blog-head-title font-2rem pt-5"> {headline} </h1>
+    <div className="sub-title pb-5"> Få de seneste nyheder, tip og råd til at maksimere din JAMStack og din webshop. </div>
     <div className="row">
       <div className={'col-md-12 mb-5'}>
         <Link to={items[0].to} className="entry head-entry">
