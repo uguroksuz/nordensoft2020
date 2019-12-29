@@ -15,7 +15,8 @@ h1, h2, h3, h4, h5, h6, strong{
 }
 
 h1{
-  font-size: 53px;
+  font-size: 2.575rem;
+  line-height: 3rem;
 }
 
 input:focus,
@@ -28,8 +29,52 @@ a:hover {
   text-decoration: none;
 }
 
+.padding-zero {
+  padding: 0 !important;
+}
+
 .page-wrap {
   padding-top: 70px !important;
+}
+
+.single-page-header .left-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-page-header h1 {
+  max-width: 250px;
+  text-align: end;
+}
+
+.single-page-header .single-page-subtitle{
+  max-width: 300px;
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+.single-page-header p {
+  border-left: 1px solid #f26322;
+  padding-left: 20px;
+  max-width: 450px;
+}
+
+.single-page-header .button-container {
+  padding: 12px 24px;
+}
+
+.single-page-header .single-page-outline-btn {
+  border: 2px solid #f26322;
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: #f26322;
+}
+
+.single-page-header .single-page-outline-btn:hover {
+  border: 2px solid #f26322;
+  background-color: #f26322;
+  color: #ffffff;
 }
 
 .about{

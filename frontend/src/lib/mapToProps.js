@@ -60,6 +60,17 @@ export function mapRightImageArticleToProps ({title, bodyRaw, image = null}){
     imageSrc: i,    
   }
 }
+export function mapSinglePageHeaderToProps ({title, subtitle, url, buttontext, bodyRaw, image = null}){
+  let i = (image != null) ? image.asset.url : null;
+  return{
+    headline: title,
+    subtitle: subtitle,
+    url: url,
+    buttontext: buttontext,
+    blockContent: bodyRaw,
+    imageSrc: i,
+  }
+}
 export function mapLetterDefinitionToProps ({title, bodyRaw, image = null}) {
   let i = (image != null) ? image.asset.url : null;
   return {

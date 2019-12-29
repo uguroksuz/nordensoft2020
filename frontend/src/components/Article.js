@@ -11,9 +11,9 @@ const Article = ({
     <>
       {typeof color == 'string' ?
         <article style={{ background: color }}>
-          <div className="container pt-5 pb-5">
+          <div className={`container ${customclass}`}>
             <div className="row">
-              <div className={`${customclass}`}>
+              <div className="col-md-12">
                 {headline != null ? <h2>{headline}</h2> : null}
                 {blockContent && <BlockContent blocks={blockContent} />}
               </div>
@@ -22,9 +22,9 @@ const Article = ({
         </article>
         :
         <article>
-          <div className="container pt-5 pb-5">
+          <div className={`container ${customclass}`}>
             <div className="row">
-              <div className={`${customclass}`}>
+              <div className="col-md-12">
                 {headline != null ? <h2 className="py-5">{headline}</h2> : null}
                 {blockContent && <BlockContent blocks={blockContent} />}
               </div>

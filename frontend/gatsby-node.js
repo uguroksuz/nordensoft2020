@@ -210,6 +210,19 @@ exports.createPages = async ({ actions, graphql }) => {
                   }
                   bodyRaw
                 }
+                ... on SANITY_SharedSinglePageHeader {
+                  _key
+                  title
+                  subtitle
+                  url
+                  buttontext
+                  image {
+                    asset {
+                      url
+                    }
+                  }
+                  bodyRaw
+                }
                 ... on SANITY_SharedLatestUpdates {
                   _id
                   title
@@ -545,6 +558,19 @@ exports.createPages = async ({ actions, graphql }) => {
                   url
                 }
               }
+            }
+            ... on SANITY_SinglePageHeader {
+              _key
+              title
+              subtitle
+              url
+              buttontext
+              image {
+                asset {
+                  url
+                }
+              }
+              bodyRaw
             }
             ... on SANITY_FeatureCollection {
                _key

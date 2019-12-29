@@ -28,9 +28,9 @@ const TableSection = ({
               </thead> */}
               <tbody>
                 {rows.map((row, i) => (
-                  <tr>
+                  <tr key={i}>
                     {row.cells.map((cell, i) => (
-                      i == 0 ? <th scope="row">{cell}</th> :
+                      i == 0 ? <th scope="row" key={i}>{cell}</th> :
                       <td>{cell}</td>
                     ))}
                   </tr>

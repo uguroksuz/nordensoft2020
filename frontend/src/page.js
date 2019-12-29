@@ -21,6 +21,7 @@ import {
   mapCenterArticleToProps,
   mapLeftImageArticleToProps,
   mapRightImageArticleToProps,
+  mapSinglePageHeaderToProps,
   mapCenterImageLayoutToProps,
   mapLetterDefinitionToProps,
   mapDefinitionToProps,
@@ -47,6 +48,7 @@ import Definition from './components/Definition'
 import CustomersBlock from './components/CustomersBlock'
 import LeftImageArticle from './components/LeftImageArticle'
 import RightImageArticle from './components/RightImageArticle'
+import SinglePageHeader from './components/SinglePageHeader'
 import CasesCollection from './components/CasesCollection'
 import PlansCollection from './components/PlansCollection'
 import TableSection from './components/TableSection'
@@ -114,6 +116,14 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapRightImageArticleToProps(section)}
+                          />
+                        )
+                      case 'SANITY_SinglePageHeader':
+                        return (
+                          <SinglePageHeader
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapSinglePageHeaderToProps(section)}
                           />
                         )
                       case 'SANITY_PageHeader':
