@@ -51,43 +51,7 @@ class Layout extends React.Component {
                 title={data.sanity.allSiteSeoSettings[0].title}
                 meta={[
                   { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
-                  { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords },
-                  {
-                    property: 'og:title',
-                    content: openGraph.title
-                  },
-                  {
-                    property: 'og:description',
-                    content: openGraph.description
-                  },
-                  {
-                    property: 'og:type',
-                    content: 'website'
-                  },
-                  {
-                    property: 'og:image',
-                    content: openGraph.image.asset.url
-                  },
-                  {
-                    property: 'og:url',
-                    content: 'https://www.nordensoft.dk'
-                  },
-                  // {
-                  //   name: 'twitter:card',
-                  //   content: 'summary'
-                  // },
-                  // {
-                  //   name: 'twitter:creator',
-                  //   content: data.site.author
-                  // },
-                  // {
-                  //   name: 'twitter:title',
-                  //   content: title
-                  // },
-                  // {
-                  //   name: 'twitter:description',
-                  //   content: metaDescription
-                  // }
+                  { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords }
                 ]}
                 bodyAttributes={{
                   style: { background: theme.background, color: theme.color }
@@ -96,6 +60,13 @@ class Layout extends React.Component {
                 <html lang={data.sanity.allSiteSeoSettings[0].hreflang} />
                 <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
+
+                <meta property="og:title" content={openGraph.title} />
+                <meta property="og:description" content={openGraph.description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.nordensoft.dk" />
+                <meta property="og:image" content={openGraph.image.asset.url} />
+
                 <script type="application/ld+json">
                   {data.sanity.allSiteSeoSettings[0].schema ? data.sanity.allSiteSeoSettings[0].schema : null}
                 </script>
