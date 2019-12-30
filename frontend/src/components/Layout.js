@@ -45,7 +45,6 @@ class Layout extends React.Component {
           }
         `}
         render={data => {
-          let ogImage       = (typeof openGraph != 'undefined' && openGraph.image != null) ? openGraph.image.asset.url : data.sanity.allSiteSeoSettings[0].ogImage.asset.url;
           return (
             <>
               <Helmet
@@ -67,7 +66,7 @@ class Layout extends React.Component {
                   },
                   {
                     property: 'og:image',
-                    content: ogImage
+                    content: openGraph.image.asset.url
                   },
                   {
                     property: 'og:url',
