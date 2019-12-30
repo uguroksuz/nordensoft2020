@@ -17,7 +17,7 @@ const TableSection = ({
         </div>
         <div id="generic_price_table">
           <div className="container">
-            <table className="table">
+            <table className="table table-striped">
               {/* <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -30,7 +30,7 @@ const TableSection = ({
                 {rows.map((row, i) => (
                   <tr key={i}>
                     {row.cells.map((cell, i) => (
-                      i === 0 ? <th scope="row" key={i}>{cell}</th> :
+                      i === 0 ? <th scope="row" className="text-left w-50" key={i}>{cell}</th> :
                       <td key={i}>{cell}</td>
                     ))}
                   </tr>

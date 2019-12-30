@@ -58,8 +58,8 @@ const Page = ({ pageContext = {} }) => (
     {theme => (
       <ModalStackProvider>
         {modalStackDepth => (
-          <Layout overlay={modalStackDepth > 0} class={(pageContext.page.customClass != null) ? pageContext.page.customClass : null}>
-            {/* {pageContext.page.customClass} */}
+          <Layout overlay={modalStackDepth > 0} class={(pageContext.page.customClass != null) ? pageContext.page.customClass : null} openGraph={pageContext.openGraph}>
+            {/* {JSON.stringify(pageContext)} */}
             {!pageContext.page && <div>No data</div>}
             {pageContext.page &&
               !pageContext.page.sections && <div>No sections</div>}

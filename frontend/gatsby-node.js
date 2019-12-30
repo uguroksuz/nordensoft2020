@@ -20,6 +20,31 @@ exports.createPages = async ({ actions, graphql }) => {
         }
         title
         publishedAt
+        openGraph {
+          description
+          title
+          image {
+            asset {
+              _id
+              url
+              title
+              label
+            }
+          }
+          video {
+            _key
+            height
+            width
+            type
+            file {
+              asset {
+                url
+                title
+                label
+              }
+            }
+          }
+        }
         slug {
           current
         }
@@ -28,6 +53,32 @@ exports.createPages = async ({ actions, graphql }) => {
       }
       allRoutes {
         _id
+        openGraph {
+          description
+          title
+          image {
+            asset {
+              label
+              url
+              description
+              title
+              _id
+            }
+          }
+          video {
+            type
+            file {
+              asset {
+                url
+                title
+                label
+                _id
+              }
+            }
+          }
+          _key
+          _type
+        }
         slug {
           current
         }
@@ -627,19 +678,20 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`./src/post.js`),
       context: {
         _id: post._id,
-        post
+        post,
       }
     })
   })
 
-  data.sanity.allRoutes.forEach(({ _id, slug, page }) => {
+  data.sanity.allRoutes.forEach(({ _id, slug, page, openGraph }) => {
     // console.log("route", slug.current)
     actions.createPage({
       path: slug.current === "/" ? "/" : `/${slug.current}/`,
       component: path.resolve(`./src/page.js`),
       context: {
         _id,
-        page
+        page,
+        openGraph
       }
     })
   })

@@ -13,7 +13,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, theme } = this.props
+    const { children, theme, openGraph } = this.props;
     return (
       <StaticQuery
         query={graphql`
@@ -44,34 +44,74 @@ class Layout extends React.Component {
             }
           }
         `}
-        render={data => (
-          <>
-            <Helmet
-              title={data.sanity.allSiteSeoSettings[0].title}
-              meta={[
-                { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
-                { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords }
-              ]}
-              bodyAttributes={{
-                style: { background: theme.background, color: theme.color }
-              }}
-            >
-              <html lang={data.sanity.allSiteSeoSettings[0].hreflang} />
-              <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
-              
-              <script> 
-                { data.sanity.allSiteSeoSettings[0].schema ?  data.sanity.allSiteSeoSettings[0].schema : null} 
-              </script>
-              <script> 
-                { data.sanity.allSiteSeoSettings[0].googletagmanager ? data.sanity.allSiteSeoSettings[0].googletagmanager : null} 
-              </script>
-              
-            </Helmet>
-            <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
-              {children}
-            </div>
-          </>
-        )}
+        render={data => {
+          let ogImage       = (typeof openGraph != 'undefined' && openGraph.image != null) ? openGraph.image.asset.url : data.sanity.allSiteSeoSettings[0].ogImage.asset.url;
+          return (
+            <>
+              <Helmet
+                title={data.sanity.allSiteSeoSettings[0].title}
+                meta={[
+                  { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
+                  { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords },
+                  {
+                    property: 'og:title',
+                    content: openGraph.title
+                  },
+                  {
+                    property: 'og:description',
+                    content: openGraph.description
+                  },
+                  {
+                    property: 'og:type',
+                    content: 'website'
+                  },
+                  {
+                    property: 'og:image',
+                    content: ogImage
+                  },
+                  {
+                    property: 'og:url',
+                    content: 'https://www.nordensoft.dk'
+                  },
+                  // {
+                  //   name: 'twitter:card',
+                  //   content: 'summary'
+                  // },
+                  // {
+                  //   name: 'twitter:creator',
+                  //   content: data.site.author
+                  // },
+                  // {
+                  //   name: 'twitter:title',
+                  //   content: title
+                  // },
+                  // {
+                  //   name: 'twitter:description',
+                  //   content: metaDescription
+                  // }
+                ]}
+                bodyAttributes={{
+                  style: { background: theme.background, color: theme.color }
+                }}
+              >
+                <html lang={data.sanity.allSiteSeoSettings[0].hreflang} />
+                <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
+                <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
+                <script type="application/ld+json">
+                  {data.sanity.allSiteSeoSettings[0].schema ? data.sanity.allSiteSeoSettings[0].schema : null}
+                </script>
+                <script>
+                  {data.sanity.allSiteSeoSettings[0].googletagmanager ? data.sanity.allSiteSeoSettings[0].googletagmanager : null}
+                </script>
+
+              </Helmet>
+              <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
+                {/* {JSON.stringify(openGraph)} */}
+                {children}
+              </div>
+            </>
+          )
+        }}
       />
     )
   }

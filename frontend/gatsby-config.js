@@ -4,7 +4,7 @@ const {dataset, projectId} = sanityManifest.api
 module.exports = {
   siteMetadata: {
     title: "Norden Soft",
-    siteUrl: `https://nordensoft.dk`,
+    siteUrl: `https://www.nordensoft.dk`,
     theme: {
       background: "#FFFFFF",
       color: "#182E3F",
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://nordensoft.dk',
-        sitemap: 'https://nordensoft.dk/sitemap.xml',
+        host: 'https://www.nordensoft.dk',
+        sitemap: 'https://www.nordensoft.dk/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
