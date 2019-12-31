@@ -104,7 +104,7 @@ const Page = ({ pageContext = {} }) => (
             render={data => {
               const obj = mapAllSharedNavigationsToPropsObject(data)
               return (
-                <Layout overlay={modalStackDepth > 0} openGraph={pageContext.post.openGraph}>
+                <Layout overlay={modalStackDepth > 0} og={(pageContext.post.openGraph != null) ? pageContext.post.openGraph : null}>
                   <SiteNav {...obj.mainNav} />
                   {/* <Article {...mapPageContextToArticleProps(pageContext)} /> */}
                   <div className="container">

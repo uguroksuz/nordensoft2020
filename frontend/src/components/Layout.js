@@ -13,7 +13,10 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, theme, og } = this.props;
+    const { children, theme } = this.props;
+    let ogTitle       = this.props.og.title;
+    let ogDescription = this.props.og.description;
+    let ogImage       = this.props.og.image.asset.url;
     return (
       <StaticQuery
         query={graphql`
@@ -61,11 +64,11 @@ class Layout extends React.Component {
                 <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
 
-                <meta property="og:title" content={`${og.title}`} />
-                <meta property="og:description" content={`${og.description}`} />
+                <meta property="og:title" content={JSON.stringify(ogTitle)} />
+                <meta property="og:description" content={JSON.stringify(ogDescription)} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.nordensoft.dk" />
-                <meta property="og:image" content={`${og.image.asset.url}`} />
+                <meta property="og:image" content={JSON.stringify(ogImage)} />
 
                 <script type="application/ld+json">
                   {data.sanity.allSiteSeoSettings[0].schema ? data.sanity.allSiteSeoSettings[0].schema : null}
@@ -76,7 +79,7 @@ class Layout extends React.Component {
 
               </Helmet>
               <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
-                {JSON.stringify(og)}
+                {JSON.stringify(this.props.og)}
                 {children}
               </div>
             </>
