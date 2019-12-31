@@ -14,9 +14,9 @@ class Layout extends React.Component {
 
   render() {
     const { children, theme } = this.props;
-    let ogTitle       = this.props.og.title;
-    let ogDescription = this.props.og.description;
-    let ogImage       = this.props.og.image.asset.url;
+    let ogTitle       = (typeof this.props.og === "object") ? this.props.og.title : '';
+    let ogDescription = (typeof this.props.og === "object") ? this.props.og.description : '';
+    let ogImage       = (typeof this.props.og === "object") ? this.props.og.image.asset.url : '';
     return (
       <StaticQuery
         query={graphql`
@@ -79,7 +79,7 @@ class Layout extends React.Component {
 
               </Helmet>
               <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
-                {JSON.stringify(this.props.og)}
+                {/* {JSON.stringify(typeof this.props.og)} */}
                 {children}
               </div>
             </>
