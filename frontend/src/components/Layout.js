@@ -61,11 +61,11 @@ class Layout extends React.Component {
                 <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
 
-                <meta property="og:title" content={openGraph.title} />
-                <meta property="og:description" content={openGraph.description} />
+                <meta property="og:title" content={`${openGraph.title}`} />
+                <meta property="og:description" content={`${openGraph.description}`} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.nordensoft.dk" />
-                <meta property="og:image" content={openGraph.image.asset.url} />
+                <meta property="og:image" content={`${openGraph.image.asset.url}`} />
 
                 <script type="application/ld+json">
                   {data.sanity.allSiteSeoSettings[0].schema ? data.sanity.allSiteSeoSettings[0].schema : null}
