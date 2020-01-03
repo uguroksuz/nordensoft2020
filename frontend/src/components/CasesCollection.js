@@ -1,5 +1,6 @@
 import React from "react"
 import BlockContent from "@sanity/block-content-to-react"
+// import Img from 'gatsby-image'
 
 const CasesCollection = ({
   headline,
@@ -18,6 +19,12 @@ const CasesCollection = ({
           {cases.map((q, i) => (
             <div className="col-md-4" key={i}>
               <img src={q.illustration.asset.url} className="attachment-full size-full img-fluid" alt="BMW Shop Turkey" />
+              {/* <Img
+                fixed={q.illustration.asset.url}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt=""
+              /> */}
               <h4><a href={q.url} target="_blank" rel="noopener noreferrer" data-slimstat="5">{q.title}</a></h4>
             </div>
           ))}

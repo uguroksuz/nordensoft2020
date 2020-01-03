@@ -691,14 +691,14 @@ a:hover {
 
 .blog-head-title {
   text-align: center;
-  font-family: Recoleta,sans-serif;
+  /* font-family: Recoleta,sans-serif; */
   font-size: 2.575rem;
 }
 
 .blog-head-title span {
   display: block;
   text-align: center;
-  font-family: Recoleta,sans-serif;
+  /* font-family: Recoleta,sans-serif; */
   width: 100%;
 }
 
@@ -738,7 +738,7 @@ a:hover {
   font-weight: 700;
   color: #000000;
   margin-bottom: 26px;
-  font-family: Recoleta,sans-serif;
+  /* font-family: Recoleta,sans-serif; */
 }
 
 .head-entry .title {
@@ -809,9 +809,9 @@ a:hover {
 /* ======================== */
 /*   @Uğur Öksüz          	*/
 /* ========================	*/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,700,900italic,900);
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,700,900italic,900);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900); */
 
 /* #generic_price_table{
 	background-color: #f0eded;
@@ -883,7 +883,7 @@ a:hover {
 
 #generic_price_table{
 	margin: 50px 0 50px 0;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
 }
 .row .table{
     padding: 28px 0;
@@ -918,7 +918,7 @@ a:hover {
 }
 
 #generic_price_table .generic_content .generic_head_price .generic_head_content .head span{
-    font-family: "Raleway",sans-serif;
+    /* font-family: "Raleway",sans-serif; */
     font-size: 28px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -937,14 +937,14 @@ a:hover {
 
 #generic_price_table .generic_content .generic_head_price .generic_price_tag .price .sign{
     display: inline-block;
-    font-family: "Lato",sans-serif;
+    /* font-family: "Lato",sans-serif; */
     font-size: 28px;
     font-weight: 400;
     vertical-align: middle;
 }
 
 #generic_price_table .generic_content .generic_head_price .generic_price_tag .price .currency{
-    font-family: "Lato",sans-serif;
+    /* font-family: "Lato",sans-serif; */
     font-size: 60px;
     font-weight: 700;
     letter-spacing: -3px;
@@ -955,14 +955,14 @@ a:hover {
 
 #generic_price_table .generic_content .generic_head_price .generic_price_tag .price .cent{
     display: inline-block;
-    font-family: "Lato",sans-serif;
+    /* font-family: "Lato",sans-serif; */
     font-size: 24px;
     font-weight: 400;
     vertical-align: bottom;
 }
 
 #generic_price_table .generic_content .generic_head_price .generic_price_tag .month{
-    font-family: "Lato",sans-serif;
+    /* font-family: "Lato",sans-serif; */
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -976,7 +976,7 @@ a:hover {
 }
 
 #generic_price_table .generic_content .generic_feature_list ul li{
-	font-family: "Lato",sans-serif;
+	/* font-family: "Lato",sans-serif; */
 	font-size: 18px;
 	padding: 15px 0;
 	transition: all 0.3s ease-in-out 0s;
@@ -1003,7 +1003,7 @@ a:hover {
 	-o-border-radius: 50px;
 	-webkit-border-radius: 50px;
     display: inline-block;
-    font-family: "Lato",sans-serif;
+    /* font-family: "Lato",sans-serif; */
     font-size: 18px;
     outline: medium none;
     padding: 12px 30px;
@@ -1054,9 +1054,9 @@ a:hover {
 }
 @media (min-width: 1200px) {
 }
-#generic_price_table_home{
+/* #generic_price_table_home{
 	 font-family: 'Raleway', sans-serif;
-}
+} */
 
 #generic_price_table_home ul{
 	margin: 0 auto;

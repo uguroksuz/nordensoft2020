@@ -58,8 +58,8 @@ module.exports = {
     // {
     //   resolve: 'gatsby-source-sanity',
     //   options: {
-    //     projectId: 'yhydx5bc',
-    //     dataset: 'production',
+    //     projectId: projectId,
+    //     dataset: dataset,
     //     token: 'skl0N5qdSjdwUGEvAa0JLYvAOnNGFGNGnZsyYlVkxj8ia4yCnT8JIwoTA3NvupCh68QPgnjiuWyl0wjfHcpKWtamK89lFpx8jtba60F7LeIytb6GLheagE4VQ2WpInEkl3WAUgr3PL1ZqMDZY0xqf1InHNAe2cWGrYZ3KXcxXNakM3xlk1ek',
     //     watchMode: false,
     //     overlayDrafts: false
