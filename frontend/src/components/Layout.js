@@ -52,10 +52,10 @@ class Layout extends React.Component {
             <>
               <Helmet
                 title={data.sanity.allSiteSeoSettings[0].title}
-                meta={[
-                  { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
-                  { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords }
-                ]}
+                // meta={[
+                //   { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
+                //   { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords }
+                // ]}
                 bodyAttributes={{
                   style: { background: theme.background, color: theme.color }
                 }}
@@ -64,11 +64,14 @@ class Layout extends React.Component {
                 <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
 
+                <meta name="description" content={data.sanity.allSiteSeoSettings[0].description} />
+                <meta name="keywords" content={data.sanity.allSiteSeoSettings[0].keywords} />
+
                 <meta property="og:title" content={JSON.stringify(ogTitle)} />
                 <meta property="og:description" content={JSON.stringify(ogDescription)} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.nordensoft.dk" />
-                <meta property="og:image" content={JSON.stringify(ogImage)} />
+                <meta property="og:image" content={ogImage} />
 
                 <script type="application/ld+json">
                   {data.sanity.allSiteSeoSettings[0].schema ? data.sanity.allSiteSeoSettings[0].schema : null}
