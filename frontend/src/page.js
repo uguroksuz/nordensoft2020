@@ -25,6 +25,7 @@ import {
   mapCenterImageLayoutToProps,
   mapLetterDefinitionToProps,
   mapDefinitionToProps,
+  mapContactFormToProps,
   mapCustomersBlockToProps,
   mapSharedHeroToHeroProps,
   mapSharedFeatureCollectionToFeatureCollectionProps,
@@ -35,7 +36,8 @@ import {
   mapSharedNavigationToSiteFooterProps,
   mapTestimonialCollectionToTestimonialCarouselProps,
   mapSharedCallToActionToCallToActionProps,
-  mapSharedTableSectionToProps
+  mapSharedTableSectionToProps,
+  mapSharedContactFormToProps
 } from './lib/mapToProps'
 import Article from './components/Article'
 import Slider from './components/Slider'
@@ -52,6 +54,7 @@ import SinglePageHeader from './components/SinglePageHeader'
 import CasesCollection from './components/CasesCollection'
 import PlansCollection from './components/PlansCollection'
 import TableSection from './components/TableSection'
+import ContactForm from './components/ContactForm'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -84,6 +87,14 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapPersonsToProps(section)}
+                          />
+                        )
+                      case 'SANITY_ContactForm':
+                        return (
+                          <ContactForm
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapContactFormToProps(section)}
                           />
                         )
                       case 'SANITY_TableSection':
@@ -395,7 +406,16 @@ const Page = ({ pageContext = {} }) => (
                             theme={theme}
                           />
                         )
-
+                      case 'SANITY_SharedContactForm':
+                        return (
+                          <ContactForm
+                            key={referencedSection._id}
+                            {...mapSharedContactFormToProps(
+                              referencedSection
+                            )}
+                            theme={theme}
+                          />
+                        )
                       default:
                         return (
                           <pre key={referencedSection._id}>

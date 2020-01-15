@@ -28,6 +28,12 @@ export default {
         of: [{ type: 'contactPerson' }]
       },
       {
+        name: 'nsContactForm',
+        title: 'Contact Form',
+        type: 'array',
+        of: [{ type: 'contactForm' }]
+      },
+      {
         name: 'addressTitle',
         title: 'Adress Title',
         type: 'string'

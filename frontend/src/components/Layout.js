@@ -62,6 +62,7 @@ class Layout extends React.Component {
               >
                 <html lang={data.sanity.allSiteSeoSettings[0].hreflang} />
                 <link rel="shortcut icon" href={data.sanity.allSiteSeoSettings[0].favicon.asset.url} />
+                <link rel="alternate" hreflang={data.sanity.allSiteSeoSettings[0].hreflang} href="https://www.nordensoft.dk" />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
 
                 <meta name="description" content={data.sanity.allSiteSeoSettings[0].description} />
@@ -82,7 +83,6 @@ class Layout extends React.Component {
 
               </Helmet>
               <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
-                {/* {JSON.stringify(typeof this.props.og)} */}
                 {children}
               </div>
             </>

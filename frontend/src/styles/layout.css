@@ -1165,3 +1165,37 @@ a:hover {
 	margin: 0;
 	padding: 0 0 50px 0;
 }
+
+.norden-contact-form form {
+  width: 100%;
+}
+
+.norden-contact-form input,
+.norden-contact-form select {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border-width: 1px;
+  padding: calc(.625rem - 1px) calc(.9375rem - 1px);
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  border: 1px solid #bdc5d3;
+  background-color: #eef0f4;
+  height: auto;
+}
+
+.norden-contact-form textarea {
+  border: 1px solid #bdc5d3;
+  background-color: #eef0f4;
+}
+
+.norden-contact-form input:focus,
+.norden-contact-form select:focus,
+.norden-contact-form textarea:focus {
+  background: none;
+  border: 1px solid #145eda;
+  box-shadow: 0 0 0 1px #156dff;
+}

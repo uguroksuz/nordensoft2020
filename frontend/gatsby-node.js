@@ -101,6 +101,11 @@ exports.createPages = async ({ actions, graphql }) => {
                     hex
                   }
                 }
+                ...on SANITY_SharedContactForm {
+                  _key
+                  _type
+                  title
+                }
                 ... on SANITY_SharedPersons {
                   _key
                   _type
@@ -109,6 +114,11 @@ exports.createPages = async ({ actions, graphql }) => {
                   addressRaw
                   customclass
                   title
+                  nsContactForm {
+                    _key
+                    _type
+                    title
+                  }
                   members {
                     person {
                       bioRaw
@@ -450,6 +460,11 @@ exports.createPages = async ({ actions, graphql }) => {
                 hex
               }
             }
+            ... on SANITY_ContactForm {
+              _key
+              _type
+              title
+            }
             ... on SANITY_Persons {
               _key
               _type
@@ -458,6 +473,11 @@ exports.createPages = async ({ actions, graphql }) => {
               addressRaw
               customclass
               title
+              nsContactForm {
+                _key
+                _type
+                title
+              }
               members {
                 person {
                   bioRaw

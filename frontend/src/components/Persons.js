@@ -1,5 +1,6 @@
 import React from "react"
 import BlockContent from "@sanity/block-content-to-react"
+import ContactForm from "./ContactForm"
 
 const Persons = ({
   headline,
@@ -8,12 +9,18 @@ const Persons = ({
   members,
   addressTitle,
   addressRaw,
+  nsContactForm
 }) => (
     <div className={`container py-5 ${customclass}`}>
       <div className="row my-5">
         <div className="col-md-8">
           <h2>{headline}</h2>
           {blockContent && <BlockContent blocks={blockContent} />}
+          <div className="row">
+            <div className="col-md-12">
+              <ContactForm />
+            </div>
+          </div>
           <div className="row">
             {members.map((member, i) => (
               <div className="col-md-4" key={i}>

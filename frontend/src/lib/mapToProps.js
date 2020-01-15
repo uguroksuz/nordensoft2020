@@ -18,13 +18,24 @@ export function mapSliderToProps ({title, slides}) {
     slides: slides,
   }
 }
-export function mapPersonsToProps ({title, contentRaw, customclass, addressTitle, addressRaw, members}) {
+export function mapContactFormToProps ({title}) {
+  return {
+    headline: title,
+  }
+}
+export function mapSharedContactFormToProps ({title}) {
+  return {
+    headline: title,
+  }
+}
+export function mapPersonsToProps ({title, contentRaw, customclass, addressTitle, addressRaw, members, nsContactForm}) {
   return {
     headline: title,
     publishedAt: undefined,
     media: false,
     blockContent: contentRaw,
     members: members,
+    nsContactForm: nsContactForm,
     addressTitle:addressTitle,
     addressRaw: addressRaw,
     customclass: customclass,
