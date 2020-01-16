@@ -10,31 +10,31 @@ const ContactForm = ({
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactName">Navn</label>
-                            <input type="name" className="form-control" id="contactName" />
+                            <input type="name" name="name" className="form-control" id="contactName" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactEmail">E-Mail</label>
-                            <input type="email" className="form-control" id="contactEmail" />
+                            <input type="email" name="email" className="form-control" id="contactEmail" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactPhone">Telefon</label>
-                            <input type="text" className="form-control" id="contactPhone" />
+                            <input type="text" name="phone" className="form-control" id="contactPhone" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactWebsite">Virksomheds Hjemmside</label>
-                            <input type="text" className="form-control" id="contactWebsite" />
+                            <input type="text" name="website" className="form-control" id="contactWebsite" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactSize">Virksomheds Størrelse</label>
-                            <select className="form-control" id="contactSize">
+                            <select className="form-control" name="companySize" id="contactSize">
                                 <option value="1-10">1-10</option>
                                 <option value="11-100">11-100</option>
                                 <option value="101-1000">101-1000</option>
@@ -303,7 +303,7 @@ const ContactForm = ({
                     <div className="col-md-12">
                         <div className="form-group">
                             <label htmlFor="contactMessage">Fortæl os, hvordan vi kan hjælpe</label>
-                            <textarea className="form-control" id="contactMessage" rows="5"></textarea>
+                            <textarea name="message" className="form-control" id="contactMessage" rows="5"></textarea>
                         </div>
                     </div>
                     <div className="col-md-12">
