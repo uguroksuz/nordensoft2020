@@ -4,7 +4,7 @@ const ContactForm = ({
     headline,
 }) => (
         <div className="container pt-5 pb-5 norden-contact-form">
-            <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+            <form name="contactform" method="post" netlify-honeypot="bot-field" data-netlify="true">
                 <div className="row">
                     <input type="hidden" name="bot-field" />
                     <div className="col-md-6">
