@@ -4,9 +4,11 @@ const ContactForm = ({
     headline,
 }) => (
         <div className="container pt-5 pb-5 norden-contact-form">
-            <form name="contactform" method="post" netlify-honeypot="bot-field" data-netlify="true">
+            <form
+                name="contactform"
+                method="post"
+                data-netlify="true" >
                 <div className="row">
-                    <input type="hidden" name="bot-field" />
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactName">Navn</label>
