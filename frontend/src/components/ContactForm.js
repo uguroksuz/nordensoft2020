@@ -1,13 +1,40 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios";
 
-const ContactForm = ({
-    headline,
-}) => (
+const ContactForm = () => {
+
+    const [serverState, setServerState] = useState({
+        submitting: false,
+        status: null
+    });
+    const handleServerResponse = (ok, msg, form) => {
+        setServerState({
+            submitting: false,
+            status: { ok, msg }
+        });
+        if (ok) {
+            form.reset();
+        }
+    };
+    const handleOnSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        setServerState({ submitting: true });
+        axios({
+            method: "post",
+            url: "https://getform.io/f/a15246b2-4f2a-4b7c-989b-7a87e61d66ca",
+            data: new FormData(form)
+        })
+            .then(r => {
+                handleServerResponse(true, "Thanks!", form);
+            })
+            .catch(r => {
+                handleServerResponse(false, r.response.data.error, form);
+            });
+    };
+    return (
         <div className="container pt-5 pb-5 norden-contact-form">
-            <form
-                name="contactform"
-                method="post"
-                data-netlify="true" >
+            <form onSubmit={handleOnSubmit} >
                 <div className="row">
                     <div className="col-md-6">
                         <div className="form-group">
@@ -309,11 +336,29 @@ const ContactForm = ({
                         </div>
                     </div>
                     <div className="col-md-12">
-                        <button type="submit" className="btn btn-primary mb-2">Kontakt mig</button>
+                        <button type="submit" className="btn btn-primary mb-2" disabled={serverState.submitting}>Kontakt mig</button>
+                    </div>
+                    <div className="col-md-12">
+                        {serverState.status && (
+                            <div className={`alert alert-success ${!serverState.status.ok ? "errorMsg" : ""}`} role="alert">
+                            {serverState.status.msg}
+                          </div>
+                        )}
                     </div>
                 </div>
             </form>
         </div>
     );
+};
 
-export default ContactForm
+export default ContactForm;
+
+// import React from "react"
+
+// const ContactForm = ({
+//     headline,
+// }) => (
+
+//     );
+
+// export default ContactForm
