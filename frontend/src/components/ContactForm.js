@@ -22,11 +22,11 @@ const ContactForm = () => {
         setServerState({ submitting: true });
         axios({
             method: "post",
-            url: "https://getform.io/f/a15246b2-4f2a-4b7c-989b-7a87e61d66ca",
+            url: "https://getform.io/f/e53e9ce1-d771-4f80-9f81-cb173dd20b15",
             data: new FormData(form)
         })
             .then(r => {
-                handleServerResponse(true, "Thanks!", form);
+                handleServerResponse(true, "Din besked er blevet sendt!", form);
             })
             .catch(r => {
                 handleServerResponse(false, r.response.data.error, form);
@@ -36,6 +36,17 @@ const ContactForm = () => {
         <div className="container pt-5 pb-5 norden-contact-form">
             <form onSubmit={handleOnSubmit} >
                 <div className="row">
+                    <div className="col-md-12">
+                        {serverState.status && (
+                            <div className={`alert alert-success ${!serverState.status.ok ? "errorMsg" : ""}`} role="alert">
+                                <p>{serverState.status.msg}</p>
+                                <p> Vi bestræber os på at besvare din henvendelse samme hverdag, du kontakter os. 
+                                    Hvis vi ikke når at vende til dage til dig på selve dagen, 
+                                    eller hvis du har kontaktet os uden for normale åbningstider, 
+                                    vil vi kontakte dig som det første den følgende hverdag.</p>
+                            </div>
+                        )}
+                    </div>
                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="contactName">Navn</label>
@@ -73,9 +84,9 @@ const ContactForm = () => {
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
-                            <label htmlFor="contactCountry">Country</label>
+                            <label htmlFor="contactCountry">Land</label>
                             <select name="country" className="form-control" id="contactCountry">
-                                <option value="true">Please select your country</option>
+                                <option value="true">Vælg dit land</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Aland Islands">Aland Islands</option>
                                 <option value="Albania">Albania</option>
@@ -337,13 +348,6 @@ const ContactForm = () => {
                     </div>
                     <div className="col-md-12">
                         <button type="submit" className="btn btn-primary mb-2" disabled={serverState.submitting}>Kontakt mig</button>
-                    </div>
-                    <div className="col-md-12">
-                        {serverState.status && (
-                            <div className={`alert alert-success ${!serverState.status.ok ? "errorMsg" : ""}`} role="alert">
-                            {serverState.status.msg}
-                          </div>
-                        )}
                     </div>
                 </div>
             </form>

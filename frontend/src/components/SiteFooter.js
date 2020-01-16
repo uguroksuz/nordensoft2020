@@ -28,7 +28,7 @@ const SiteFooter = ({sanity, items = [], theme }) => (
             </div>
           </div>
           <div className="col-md-3">
-            <div className="footer-top-title"> Kontakt os </div>
+            <div className="footer-top-title"> Bankoplysninger </div>
             <div className="mb-3">
               <BlockContent blocks={sanity.siteExtra[0].footerContactBlockRaw || []} />
             </div>
