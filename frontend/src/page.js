@@ -26,6 +26,7 @@ import {
   mapLetterDefinitionToProps,
   mapDefinitionToProps,
   mapContactFormToProps,
+  mapPriceTableToProps,
   mapCustomersBlockToProps,
   mapSharedHeroToHeroProps,
   mapSharedFeatureCollectionToFeatureCollectionProps,
@@ -55,6 +56,7 @@ import CasesCollection from './components/CasesCollection'
 import PlansCollection from './components/PlansCollection'
 import TableSection from './components/TableSection'
 import ContactForm from './components/ContactForm'
+import PriceTable from './components/PriceTable'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -95,6 +97,14 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapContactFormToProps(section)}
+                          />
+                        )
+                      case 'SANITY_PriceTable':
+                        return (
+                          <PriceTable
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapPriceTableToProps(section)}
                           />
                         )
                       case 'SANITY_TableSection':

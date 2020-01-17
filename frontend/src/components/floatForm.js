@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { IoMdClose } from 'react-icons/io';
 import { StaticQuery, graphql } from "gatsby"
 import BlockContent from "@sanity/block-content-to-react"
+import axios from "axios";
 
 export default class floatForm extends Component {
     _isMounted = false;

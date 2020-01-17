@@ -23,6 +23,11 @@ export function mapContactFormToProps ({title}) {
     headline: title,
   }
 }
+export function mapPriceTableToProps ({title}) {
+  return {
+    headline: title,
+  }
+}
 export function mapSharedContactFormToProps ({title}) {
   return {
     headline: title,

@@ -106,6 +106,11 @@ exports.createPages = async ({ actions, graphql }) => {
                   _type
                   title
                 }
+                ...on SANITY_SharedPriceTable {
+                  _key
+                  _type
+                  title
+                }
                 ... on SANITY_SharedPersons {
                   _key
                   _type
@@ -461,6 +466,11 @@ exports.createPages = async ({ actions, graphql }) => {
               }
             }
             ... on SANITY_ContactForm {
+              _key
+              _type
+              title
+            }
+            ... on SANITY_PriceTable {
               _key
               _type
               title
