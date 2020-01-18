@@ -110,6 +110,7 @@ exports.createPages = async ({ actions, graphql }) => {
                   _key
                   _type
                   title
+                  description
                 }
                 ... on SANITY_SharedPersons {
                   _key
@@ -474,6 +475,7 @@ exports.createPages = async ({ actions, graphql }) => {
               _key
               _type
               title
+              description
             }
             ... on SANITY_Persons {
               _key

@@ -487,15 +487,40 @@ a:hover {
   color: #ffffff;
 }
 .float-form-head{
-  height: 175px;
+  height: 145px;
   width: 100%;
   background-color: #a5a6ab;
   overflow: hidden;
+  position: relative;
 }
 
 .float-form-head img {
   width: 100%;
 }
+
+.float-form-head .form-submit-ok {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.float-form-head .form-submit-ok .icon-container {
+  font-size: 5rem;
+  color: #4fcac2;
+  height: 6rem;
+  width: 6rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
 
 .float-form-close {
   position: absolute;
@@ -1240,7 +1265,26 @@ a:hover {
 .ns-price-table tr:hover {
   background-color: #f4f6f8;
 }
+.price-table-title{
+  font-size: 1.85rem;
+}
+.price-table-description{
+  text-align: center;
+  font-weight: 400;
+  color: #637381;
+  font-size: 1.75rem;
+}
 @media screen and (max-width: 768px){
+  .price-table-title{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  .price-table-description{
+    font-size: 1.4rem;
+  }
   .price-button-container{
     display: block;
   }

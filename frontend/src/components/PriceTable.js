@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { FaCheck } from 'react-icons/fa';
 
-const PriceTable = ({ headline }) => {
+const PriceTable = ({ headline, description }) => {
 
     const [serverState, setServerState] = useState({
         columnVisibility: 'visible-column-2',
         b1: '',
-        b2: '',
+        b2: 'active',
         b3: ''
     });
 
@@ -22,9 +22,10 @@ const PriceTable = ({ headline }) => {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className="row my-5">
                 <div className="col-md-12">
-                    <h1 className="font-2rem text-center my-5">{headline}</h1>
+                    <h1 className="price-table-title text-center pt-5">{headline}</h1>
+                    <p className="price-table-description">{description}</p>
                 </div>
             </div>
             <div className="row">
