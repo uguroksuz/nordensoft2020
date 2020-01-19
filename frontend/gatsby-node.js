@@ -642,6 +642,32 @@ exports.createPages = async ({ actions, graphql }) => {
                 }
               }
             }
+            ... on SANITY_LeftImageArticleSubpage {
+              _key
+              title
+              bodyRaw
+              color {
+                hex
+              }
+              image {
+                asset {
+                  url
+                }
+              }
+            }
+            ... on SANITY_RightImageArticleSubpage {
+              _key
+              title
+              bodyRaw
+              color {
+                hex
+              }
+              image {
+                asset {
+                  url
+                }
+              }
+            }
             ... on SANITY_SinglePageHeader {
               _key
               title

@@ -38,7 +38,9 @@ import {
   mapTestimonialCollectionToTestimonialCarouselProps,
   mapSharedCallToActionToCallToActionProps,
   mapSharedTableSectionToProps,
-  mapSharedContactFormToProps
+  mapSharedContactFormToProps,
+  mapLeftImageArticleSubpageToProps,
+  mapRightImageArticleSubpageToProps,
 } from './lib/mapToProps'
 import Article from './components/Article'
 import Slider from './components/Slider'
@@ -57,6 +59,8 @@ import PlansCollection from './components/PlansCollection'
 import TableSection from './components/TableSection'
 import ContactForm from './components/ContactForm'
 import PriceTable from './components/PriceTable'
+import LeftImageArticleSubpage from './components/LeftImageArticleSubpage'
+import RightImageArticleSubpage from './components/RightImageArticleSubpage'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -137,6 +141,22 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapRightImageArticleToProps(section)}
+                          />
+                        )
+                      case 'SANITY_LeftImageArticleSubpage':
+                        return (
+                          <LeftImageArticleSubpage
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapLeftImageArticleSubpageToProps(section)}
+                          />
+                        )
+                      case 'SANITY_RightImageArticleSubpage':
+                        return (
+                          <RightImageArticleSubpage
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapRightImageArticleSubpageToProps(section)}
                           />
                         )
                       case 'SANITY_SinglePageHeader':

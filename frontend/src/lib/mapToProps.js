@@ -77,6 +77,28 @@ export function mapRightImageArticleToProps ({title, bodyRaw, image = null}){
     imageSrc: i,    
   }
 }
+
+export function mapLeftImageArticleSubpageToProps ({title, bodyRaw, image = null, color = null}){
+  let i = (image != null) ? image.asset.url : null;
+  let c = (color != null) ? color.hex : null;
+  return{
+    headline: title,
+    blockContent: bodyRaw,
+    imageSrc: i,
+    color: c,
+  }
+}
+export function mapRightImageArticleSubpageToProps ({title, bodyRaw, image = null, color = null}){
+  let i = (image != null) ? image.asset.url : null;
+  let c = (color != null) ? color.hex : null;
+  return{
+    headline: title,
+    blockContent: bodyRaw,
+    imageSrc: i,
+    color: c,
+  }
+}
+
 export function mapSinglePageHeaderToProps ({title, subtitle, url, buttontext, bodyRaw, image = null}){
   let i = (image != null) ? image.asset.url : null;
   return{

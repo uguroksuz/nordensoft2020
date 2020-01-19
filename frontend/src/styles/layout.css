@@ -121,10 +121,14 @@ a:hover {
   margin: 0 10px;
 }
 
+.navbar-nav{
+  padding-left: 40px;
+}
+
 .navbar-light .navbar-nav .nav-link{
   color: #000000;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0 .5rem;
 }
 
@@ -1326,4 +1330,12 @@ a:hover {
   .price-button:focus {
     outline: none;
   }
+}
+
+.image-block,
+.image-block h1,
+.image-block h2,
+.image-block h3,
+.image-block h4 {
+  color: #ffffff;
 }
