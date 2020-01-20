@@ -10,11 +10,11 @@ const RightImageArticleSubpage = ({
     <article className="image-block" style={{ background: color }}>
       <div className="container pt-5 pb-5 ">
         <h2 className="text-center py-3">{headline}</h2>
-        <div className="row pt-5">
+        <div className="row pt-5 flex-column-reverse flex-md-row">
           <div className="col-md-6 pt-5 image-block-content">
             {blockContent && <BlockContent blocks={blockContent} />}
           </div>
-          <div className="col-md-6 image-block-content">
+          <div className="col-md-6 image-block-content flex-first flex-md-unordered">
             <img src={imageSrc} alt="rightimage" className="attachment-full size-full img-fluid" />
           </div>
         </div>

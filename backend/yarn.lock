@@ -738,7 +738,7 @@
   version "1.1.3"
   resolved "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
-"@sanity/base@^0.147.6":
+"@sanity/base@^0.147.8":
   version "0.147.8"
   resolved "https://registry.npmjs.org/@sanity/base/-/base-0.147.8.tgz#f607f5ed0fe1dc5a4c21fa3a19c53dc18718d3df"
   dependencies:
@@ -824,7 +824,7 @@
     react-color "^2.13.8"
     reactcss "^1.2.0"
 
-"@sanity/components@^0.147.6":
+"@sanity/components@^0.147.9":
   version "0.147.9"
   resolved "https://registry.npmjs.org/@sanity/components/-/components-0.147.9.tgz#bb9455c61adb27775c990e7a764981196ae46f01"
   dependencies:
@@ -855,7 +855,7 @@
     rxjs "^6.5.3"
     string-hash "^1.1.3"
 
-"@sanity/core@^0.147.6":
+"@sanity/core@^0.147.9":
   version "0.147.9"
   resolved "https://registry.npmjs.org/@sanity/core/-/core-0.147.9.tgz#1fab377aa1afad69e4fedeefafa3774cf0fae0d5"
   dependencies:
@@ -938,7 +938,7 @@
     "@sanity/generate-help-url" "0.147.0"
     "@sanity/rich-date-input" "0.147.0"
 
-"@sanity/default-layout@^0.147.6":
+"@sanity/default-layout@^0.147.9":
   version "0.147.9"
   resolved "https://registry.npmjs.org/@sanity/default-layout/-/default-layout-0.147.9.tgz#4920348e0078e969ac5bd0a7e41e3ec1a60c4472"
   dependencies:
@@ -959,7 +959,7 @@
     prop-types "^15.6.0"
     rxjs "^6.5.3"
 
-"@sanity/desk-tool@^0.147.7":
+"@sanity/desk-tool@^0.147.9":
   version "0.147.9"
   resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-0.147.9.tgz#6a6a8eb64d5b70bfd98cfee8810da85934f05f7d"
   dependencies:
@@ -1294,7 +1294,7 @@
     es6-error "^4.0.2"
     type-of-is "^3.5.1"
 
-"@sanity/vision@^0.147.6":
+"@sanity/vision@^0.147.9":
   version "0.147.9"
   resolved "https://registry.npmjs.org/@sanity/vision/-/vision-0.147.9.tgz#c513dc7498f358efb45db58aa453edbe4a952c8c"
   dependencies:
@@ -2238,8 +2238,8 @@ code-point-at@^1.0.0:
   resolved "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
 codemirror@^5.47.0:
-  version "5.50.2"
-  resolved "https://registry.npmjs.org/codemirror/-/codemirror-5.50.2.tgz#32ddfe2b50193fcf573d8141c4a31d267c92b4a3"
+  version "5.51.0"
+  resolved "https://registry.npmjs.org/codemirror/-/codemirror-5.51.0.tgz#7746caaf5223e68f5c55ea11e2f3cc82a9a3929e"
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -3004,8 +3004,8 @@ ee-first@1.1.1:
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.322:
-  version "1.3.337"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.337.tgz#b2c093cdb66121a946d333b454adcdc5666ceaed"
+  version "1.3.338"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.338.tgz#4f33745aed599dfa0fd7b388bf754c164e915168"
 
 element-resize-detector@1.1.13:
   version "1.1.13"
@@ -3109,8 +3109,8 @@ error-ex@^1.2.0, error-ex@^1.3.1:
     is-arrayish "^0.2.1"
 
 es-abstract@^1.13.0, es-abstract@^1.17.0-next.1, es-abstract@^1.17.2:
-  version "1.17.2"
-  resolved "https://registry.npmjs.org/es-abstract/-/es-abstract-1.17.2.tgz#965b10af56597b631da15872c17a405e86c1fd46"
+  version "1.17.3"
+  resolved "https://registry.npmjs.org/es-abstract/-/es-abstract-1.17.3.tgz#d921ff5889a3664921094bb13aaf0dfd11818578"
   dependencies:
     es-to-primitive "^1.2.1"
     function-bind "^1.1.1"
@@ -3669,8 +3669,8 @@ function.prototype.name@^1.1.1, function.prototype.name@^1.1.2:
     functions-have-names "^1.2.0"
 
 functions-have-names@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.0.tgz#83da7583e4ea0c9ac5ff530f73394b033e0bf77d"
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.1.tgz#a981ac397fa0c9964551402cdc5533d7a4d52f91"
 
 gauge@~2.7.3:
   version "2.7.4"
