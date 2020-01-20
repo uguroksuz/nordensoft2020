@@ -141,8 +141,9 @@ export function mapPageHeaderToProps ({title, bodyRaw}) {
     blockContent: bodyRaw
   }
 }
-export function mapCenterArticleToProps ({title, bodyRaw, image = null}) {
+export function mapCenterArticleToProps ({title, bodyRaw, image = null, color = "inherit"}) {
   let i = (image != null) ? image.asset.url : null;
+  let c = (color != null) ? color.hex : null;
   return {
     headline: title,
     introBlockContent: [],
@@ -150,6 +151,7 @@ export function mapCenterArticleToProps ({title, bodyRaw, image = null}) {
     media: true,
     blockContent: bodyRaw,
     imageSrc: i,
+    color: c,
   }
 }
 export function mapCenterImageLayoutToProps ({title, bodyRaw, centerImage = null, leftFeatures = [], rightFeatures = []}) {

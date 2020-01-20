@@ -1332,10 +1332,50 @@ a:hover {
   }
 }
 
-.image-block,
+.monthly-price {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monthly-price .price {
+  position: relative;
+  display: block;
+}
+
+.monthly-price .price__number {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.monthly-price .price__number .price__sub {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.monthly-price .kr {
+  position: absolute;
+  top: 0.5rem;
+  left: -1.2rem;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.image-block {
+  overflow: hidden;
+}
+
+.image-block-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .image-block,
 .image-block h1,
 .image-block h2,
 .image-block h3,
 .image-block h4 {
   color: #ffffff;
-}
+} */

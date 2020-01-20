@@ -185,6 +185,9 @@ exports.createPages = async ({ actions, graphql }) => {
                   _id
                   title
                   bodyRaw
+                  color {
+                    hex
+                  }
                   image {
                     _key
                     asset {
@@ -550,6 +553,9 @@ exports.createPages = async ({ actions, graphql }) => {
               _key
               title
               bodyRaw
+              color {
+                hex
+              }
               image {
                 _key
                 asset {

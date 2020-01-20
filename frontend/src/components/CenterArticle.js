@@ -97,21 +97,24 @@ const CenterArticle = ({
   introBlockContent,
   publishedAt,
   media,
-  blockContent
+  blockContent,
+  color
 }) => (
-  <div className="container text-center pt-5">
-    <h1 className="mb-5">{headline}</h1>
-    { imageSrc != null ? <img alt={'nordensoft'} src={imageSrc} className="mb-3" />: null}
-    {introBlockContent && (
-      <Intro>
-        <BlockContent blocks={introBlockContent} />
-      </Intro>
-    )}
-    {publishedAt && <PublishedAt>{publishedAt}</PublishedAt>}
-    {media && <MainMedia {...media} />}
-      <div>{blockContent && <BlockContent blocks={blockContent} />}</div>
-    {publishedAt && <PublishedAt>{publishedAt}</PublishedAt>}
-  </div>
-)
+    <article className="image-block" style={{ background: color }}>
+      <div className="container text-center pt-5">
+        <h1 className="mb-5">{headline}</h1>
+        {imageSrc != null ? <img alt={'nordensoft'} src={imageSrc} className="mb-3" /> : null}
+        {introBlockContent && (
+          <Intro>
+            <BlockContent blocks={introBlockContent} />
+          </Intro>
+        )}
+        {publishedAt && <PublishedAt>{publishedAt}</PublishedAt>}
+        {media && <MainMedia {...media} />}
+        <div>{blockContent && <BlockContent blocks={blockContent} />}</div>
+        {publishedAt && <PublishedAt>{publishedAt}</PublishedAt>}
+      </div>
+    </article>
+  )
 
 export default CenterArticle
