@@ -51,7 +51,7 @@ class Layout extends React.Component {
           return (
             <>
               <Helmet
-                title={data.sanity.allSiteSeoSettings[0].title}
+                title={ogTitle}
                 // meta={[
                 //   { name: "description", content: data.sanity.allSiteSeoSettings[0].description },
                 //   { name: "keywords", content: data.sanity.allSiteSeoSettings[0].keywords }
@@ -65,11 +65,11 @@ class Layout extends React.Component {
                 <link rel="alternate" hreflang={data.sanity.allSiteSeoSettings[0].hreflang} href="https://www.nordensoft.dk" />
                 <meta http-equiv="content-language" content={data.sanity.allSiteSeoSettings[0].hreflang} />
 
-                <meta name="description" content={data.sanity.allSiteSeoSettings[0].description} />
+                <meta name="description" content={ogDescription} />
                 <meta name="keywords" content={data.sanity.allSiteSeoSettings[0].keywords} />
 
-                <meta property="og:title" content={JSON.stringify(ogTitle)} />
-                <meta property="og:description" content={JSON.stringify(ogDescription)} />
+                <meta property="og:title" content={ogTitle} />
+                <meta property="og:description" content={ogDescription} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.nordensoft.dk" />
                 <meta property="og:image" content={ogImage} />
