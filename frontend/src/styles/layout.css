@@ -146,14 +146,19 @@ a:hover {
 
 .contact-header{
   padding: 5rem 0;
-  background: #3d4052;
-  color: #ffffff;
+  /* background: #3d4052; */
+  background: #dae1c1;
+  /* color: #ffffff; */
 }
 
-.contact-header h1{
+.contact-block{
+  background: #e1e3e1;
+}
+
+/* .contact-header h1{
   color: #ffffff;
   margin-bottom: 30px;
-}
+} */
 
 .contact figure{
   margin: 5px;

@@ -13,7 +13,12 @@ export default {
       name: 'body',
       type: 'simpleBlockContent',
       title: 'Body'
-    }
+    },
+    // {
+    //   name: "color",
+    //   type: "color",
+    //   title: "Block Background Color"
+    // },
   ],
   preview: {
     select: {
