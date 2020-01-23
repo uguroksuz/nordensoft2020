@@ -41,6 +41,7 @@ import {
   mapSharedContactFormToProps,
   mapLeftImageArticleSubpageToProps,
   mapRightImageArticleSubpageToProps,
+  mapTwoColumnBlockToProps
 } from './lib/mapToProps'
 import Article from './components/Article'
 import Slider from './components/Slider'
@@ -61,6 +62,7 @@ import ContactForm from './components/ContactForm'
 import PriceTable from './components/PriceTable'
 import LeftImageArticleSubpage from './components/LeftImageArticleSubpage'
 import RightImageArticleSubpage from './components/RightImageArticleSubpage'
+import TwoColumnBlock from './components/TwoColumnBlock'
 
 const Page = ({ pageContext = {} }) => (
   <ThemeProvider>
@@ -85,6 +87,14 @@ const Page = ({ pageContext = {} }) => (
                             key={section._key ? section._key : i}
                             theme={theme}
                             {...mapArticleToProps(section)}
+                          />
+                        )
+                      case 'SANITY_TwoColumnBlock':
+                        return (
+                          <TwoColumnBlock
+                            key={section._key ? section._key : i}
+                            theme={theme}
+                            {...mapTwoColumnBlockToProps(section)}
                           />
                         )
                       case 'SANITY_Persons':

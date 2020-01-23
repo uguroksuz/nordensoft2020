@@ -10,6 +10,15 @@ export function mapArticleToProps ({title, bodyRaw, color = null, customclass}) 
     color: c,
   }
 }
+export function mapTwoColumnBlockToProps ({ title, bodyleftRaw, bodyrightRaw, color = null }) {
+  let c = (color != null) ? color.hex : null;
+  return {
+    headline: title,
+    blockContentLeft: bodyleftRaw,
+    blockContentRight: bodyrightRaw,
+    color: c,
+  }
+}
 export function mapSliderToProps ({title, slides}) {
   return {
     headline: title,

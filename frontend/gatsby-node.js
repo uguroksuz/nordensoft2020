@@ -196,6 +196,15 @@ exports.createPages = async ({ actions, graphql }) => {
                     }
                   }
                 }
+                ... on SANITY_SharedTwoColumnBlock {
+                  _key
+                  title
+                  bodyrightRaw
+                  bodyleftRaw
+                  color {
+                    hex
+                  }
+                }
                 ...on SANITY_SharedLetterDefinition {
                   _id
                   title
@@ -562,6 +571,15 @@ exports.createPages = async ({ actions, graphql }) => {
                   url
                   size
                 }
+              }
+            }
+            ... on SANITY_TwoColumnBlock {
+              _key
+              title
+              bodyrightRaw
+              bodyleftRaw
+              color {
+                hex
               }
             }
             ... on SANITY_LetterDefinition {
