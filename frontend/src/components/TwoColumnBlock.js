@@ -11,10 +11,10 @@ const LeftImageArticleSubpage = ({
       <div className="container pt-5 pb-5 ">
         <h2 className="text-center pt-3">{headline}</h2>
         <div className="row pb-5">
-          <div className="col-md-6 pt-5 image-block-content">
+          <div className="col-md-6 pt-5">
             {blockContentLeft && <BlockContent blocks={blockContentLeft} />}
           </div>
-          <div className="col-md-6 pt-5 image-block-content">
+          <div className="col-md-6 pt-5">
             {blockContentRight && <BlockContent blocks={blockContentRight} />}
           </div>
         </div>
