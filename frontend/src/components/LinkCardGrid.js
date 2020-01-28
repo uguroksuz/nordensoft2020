@@ -52,13 +52,13 @@ const LinkCardGrid = ({ headline, items, theme }) => (
             <div className="col-md-12">
               <Link to={items[2].to} className="entry">
                 <div className="row">
-                  <div className="entry-body col-md-6">
+                  <div className="entry-body col-lg-6">
                     <div className="title">{items[2].title}</div>
                     <CardText>
                       {items[2].text && <BlockContent blocks={items[2].text} />}
                     </CardText>
                   </div>
-                  <div className="entry-media col-md-6" theme={theme}>
+                  <div className="entry-media col-lg-6" theme={theme}>
                     {items[2].image && <img src={items[2].image.src} alt="blogImage" />}
                   </div>
                 </div>
@@ -67,13 +67,13 @@ const LinkCardGrid = ({ headline, items, theme }) => (
             <div className="col-md-12">
               <Link to={items[3].to} className="entry">
                 <div className="row">
-                  <div className="entry-body col-md-6">
+                  <div className="entry-body col-lg-6">
                     <div className="title">{items[3].title}</div>
                     <CardText>
                       {items[3].text && <BlockContent blocks={items[3].text} />}
                     </CardText>
                   </div>
-                  <div className="entry-media col-md-6" theme={theme}>
+                  <div className="entry-media col-lg-6" theme={theme}>
                     {items[3].image && <img src={items[3].image.src} alt="blogImage" />}
                   </div>
                 </div>
@@ -87,13 +87,13 @@ const LinkCardGrid = ({ headline, items, theme }) => (
           <div className={i === 0 ? 'col-md-12 mb-5' : 'col-md-6'} key={item.key}>
             <Link to={item.to} className="entry">
               <div className="row">
-                <div className="entry-body col-md-6">
+                <div className="entry-body col-lg-6">
                   <div className="title">{item.title}</div>
                   <CardText>
                     {item.text && <BlockContent blocks={item.text} />}
                   </CardText>
                 </div>
-                <div className="entry-media col-md-6" theme={theme}>
+                <div className="entry-media col-lg-6" theme={theme}>
                   {item.image && <img src={item.image.src} alt="" />}
                 </div>
               </div>

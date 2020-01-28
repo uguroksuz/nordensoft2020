@@ -11,7 +11,9 @@ const settings = {
   accessibility: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000
 };
 
 const Slider = ({
@@ -35,7 +37,7 @@ const Slider = ({
                     {slide.descriptionRaw && <BlockContent blocks={slide.descriptionRaw} />}
                   </div>
                   <div className="w-100 px-5 text-center">
-                    {slide.buttonurl && <Link className="btn btn-light" to={slide.buttonurl}> {slide.buttontext} </Link> }
+                    {slide.buttonurl && <Link className="btn btn-light" to={slide.buttonurl}> {slide.buttontext} </Link>}
                   </div>
                 </div>
               </div>

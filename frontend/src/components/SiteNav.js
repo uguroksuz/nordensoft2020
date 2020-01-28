@@ -64,7 +64,7 @@ const SiteNav = ({
                 ))}
               </ul>
           </div>
-          <span className="navbar-text d-none d-sm-block">
+          <span className="navbar-text d-none d-xl-block">
             <a href={contact.linkedin ? contact.linkedin : '#'} target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>

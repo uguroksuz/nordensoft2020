@@ -50,23 +50,23 @@ const PriceTable = ({ headline, description }) => {
                             <tr>
                                 <th className="w-50 align-middle" scope="col">Price</th>
                                 <th scope="col" className="align-middle">
-                                    <div class="monthly-price">
+                                    <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span class="price__number">170.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">170.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
                                         </span>
                                     </div>
                                 </th>
                                 <th scope="col" className="align-middle">
-                                    <div class="monthly-price">
+                                    <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span class="price__number">290.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">290.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
                                         </span>
                                     </div>
                                 </th>
                                 <th scope="col" className="align-middle">
-                                    <div class="monthly-price">
+                                    <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span class="price__number">470.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">470.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
                                         </span>
                                     </div>
                                 </th>

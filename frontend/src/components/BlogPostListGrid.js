@@ -34,7 +34,7 @@ const BlogPostListGrid = ({ headline, items, theme }) => (
     <h2 className="blog-head-title py-5"> — {headline} — </h2>
     <div className="row">
       {items.map((item, i) => (
-        <div className={'col-md-6'} key={item.key}>
+        <div className={'col-lg-6'} key={item.key}>
           <Link to={item.to} className="entry">
             <div className="row">
               <div className="entry-body col-md-6">
