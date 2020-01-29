@@ -99,7 +99,7 @@ const SiteNav = ({
                                 <div className="col-sm-6 col-lg-6">
                                   <Link to="/jamstack/" className="mb-2 d-block paragraph">
                                     <div className="h5 font-weight-bold">JAMStack</div>
-                                    <p> JAMStack design og udvikling.En JAMStack er ”Formel 1” inden for SEO og ydeevne! </p>
+                                    <p> JAMStack design og udvikling. En JAMStack er ”Formel 1” inden for SEO og ydeevne! </p>
                                   </Link>
                                 </div>
                                 <div className="col-sm-6 col-lg-6">
@@ -111,7 +111,7 @@ const SiteNav = ({
                                 <div className="col-sm-6 col-lg-6">
                                   <Link to="erp-integration" className="mb-2 d-block paragraph">
                                     <div className="h5 font-weight-bold">ERP integration</div>
-                                    <p> NAV, SAP, C5, E-conomic, Dynamics GP eller Dynamics AX - Friheden til at vælge </p>
+                                    <p> NAV, SAP, C5, E-conomic, Dynamics GP eller Dynamics AX - Friheden til at vælge. </p>
                                   </Link>
                                 </div>
                               </div>

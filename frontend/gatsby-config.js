@@ -56,6 +56,15 @@ module.exports = {
         refetchInterval: 10,
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-3171599-42",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
     // {
     //   resolve: 'gatsby-source-sanity',
     //   options: {

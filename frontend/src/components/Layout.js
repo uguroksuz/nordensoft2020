@@ -80,7 +80,6 @@ class Layout extends React.Component {
                 <script>
                   {data.sanity.allSiteSeoSettings[0].googletagmanager ? data.sanity.allSiteSeoSettings[0].googletagmanager : null}
                 </script>
-
               </Helmet>
               <div className={`page-wrap pt-5 ${this.props.class}`} theme={theme} key={'wrap'}>
                 {children}
