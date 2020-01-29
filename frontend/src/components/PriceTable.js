@@ -52,21 +52,21 @@ const PriceTable = ({ headline, description }) => {
                                 <th scope="col" className="align-middle">
                                     <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span className="price__number">170.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">170.<span className="price__sub">000</span></span><span className="kr">DKK</span></span>
                                         </span>
                                     </div>
                                 </th>
                                 <th scope="col" className="align-middle">
                                     <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span className="price__number">290.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">290.<span className="price__sub">000</span></span><span className="kr">DKK</span></span>
                                         </span>
                                     </div>
                                 </th>
                                 <th scope="col" className="align-middle">
                                     <div className="monthly-price">
                                         <span>
-                                            <span className="price"><span className="price__number">470.<span className="price__sub">000</span></span><span className="kr">Kr.</span></span>
+                                            <span className="price"><span className="price__number">470.<span className="price__sub">000</span></span><span className="kr">DKK</span></span>
                                         </span>
                                     </div>
                                 </th>

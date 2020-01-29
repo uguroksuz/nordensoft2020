@@ -102,31 +102,44 @@ a:hover {
 .slide {
   width: 100%;
 }
-
+.norden-logo {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
 .norden-navbar{
   position: fixed;
   width: 100%;
-  padding: 15px 15px !important;
+  padding: 0 !important;
   top: 0;
-  /* background-color: #649cc4 !important; */
-  /* background-image: linear-gradient( -74deg,#23afbb 0%,#296dbf var(--hero-bg-gradient-x,50%),#306bc5 100% ); */
   box-shadow: 0 9px 60px 0 rgba(0,0,0,.3);
   background-image: linear-gradient( -74deg,#ffffff 0%,#ffffff var(--hero-bg-gradient-x,50%),#ffffff 100% );
-  /* box-shadow: 0 9px 60px 0 var(--color-bg-shadow-heavy); */
-  padding: 22px 0;
   z-index: 53;
   padding: 25px 0;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease;
 }
-
+.navbar-socials a{
+  margin: 0 7px;
+}
+@media screen and (max-width: 1200px){
+  .norden-navbar{
+    min-height: 70px;
+    padding: 0 12px !important;
+  }
+  .navbar-nav{
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 1200px){
+  .navbar-nav{
+    padding-left: 40px;
+  }
+}
 .navbar-text a{
   margin: 0 10px;
-}
-
-.navbar-nav{
-  padding-left: 40px;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -138,6 +151,51 @@ a:hover {
 
 .navbar-light .navbar-brand{
   width: 156px;
+}
+
+.nav-link {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 1200px){
+  .nav-link{
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.nav-item:hover {
+  background: #f4f3f4;
+}
+
+@media screen and (min-width: 1200px){
+  .dropdown-menu{
+    padding: 4rem 1rem !important;
+  }
+  .dropdown-nord:hover .dropdown-menu{
+    display: block;
+  }
+}
+.dropdown-menu.active{
+  display: block;
+}
+
+.dropdown-menu{
+  width: 100% !important;
+  padding: 1rem;
+  margin:0 !important;
+  background-color: #f4f3f4;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0;
+}
+
+.dropdown-menu .paragraph {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 5px solid #f26322;
+  font-size: .8rem;
 }
 
 .sticky {
@@ -1364,11 +1422,10 @@ a:hover {
 }
 
 .monthly-price .kr {
-  position: absolute;
-  top: 0.5rem;
-  left: -1.2rem;
+  position: relative;
   font-weight: bold;
-  font-size: .8rem;
+  font-size: 1.2rem;
+  margin-left: 8px;
 }
 
 .image-block {
@@ -1395,7 +1452,16 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 1.3rem 0 4rem;
+  overflow: hidden;
 }
+
+@media screen and (max-width: 1200px){
+  .logo-container{
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+}
+
 .logo-wrapper {
   margin: 0 1rem;
   opacity: .3;

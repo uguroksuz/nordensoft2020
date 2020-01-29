@@ -47,7 +47,9 @@ class SiteNavContainer extends React.Component {
     this.state = {
       activeClass: 'none',
       toggleNav: false,
+      toogleMegamenu: false,
       navbarCss: 'collapse navbar-collapse',
+      megamenuCss: '',
       data: props.data,
       isMenuOpen: false,
     }
@@ -86,6 +88,18 @@ class SiteNavContainer extends React.Component {
     }
   }
 
+  megamenuOpen() {
+    if (this.state.toogleMegamenu) {
+      if (this._isMounted) {
+        this.setState({ megamenuCss: '', toogleMegamenu: false });
+      }
+    } else {
+      if (this._isMounted) {
+        this.setState({ megamenuCss: 'active', toogleMegamenu: true })
+      }
+    }
+  }
+
   handleOpenMenu = incr => {
     incr()
     this.setState({ isMenuOpen: true })
@@ -111,6 +125,7 @@ class SiteNavContainer extends React.Component {
                 onOpenMenu={() => this.handleOpenMenu(incr)}
                 onCloseMenu={() => this.handleCloseMenu(decr)}
                 navbarOpen={() => this.navbarOpen()}
+                megamenuOpen={() => this.megamenuOpen()}
               />
             )}
           />
