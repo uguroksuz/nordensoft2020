@@ -65,6 +65,19 @@ module.exports = {
         head: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-yandex-metrica`,
+      options: {
+        trackingId: "56938468",
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        trackHash: true,
+
+        // Detailed recordings of user activity on the site: mouse movement, scrolling, and clicks.
+        webvisor: true,
+      }
+    }
     // {
     //   resolve: 'gatsby-source-sanity',
     //   options: {

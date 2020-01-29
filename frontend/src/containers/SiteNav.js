@@ -116,8 +116,8 @@ class SiteNavContainer extends React.Component {
         {({ incr, decr }) => (
           <StaticQuery
             query={query}
-            render={data => (
-              <SiteNav
+            render={data => (    
+              <SiteNav key={"213123"}
                 {...mapDataToProps(data)}
                 {...this.props}
                 {...this.state}

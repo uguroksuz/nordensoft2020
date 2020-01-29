@@ -37,7 +37,7 @@ const SiteNav = ({
   navbarCss,
   megamenuCss
 }) => (
-    <Root theme={theme} invert={invert}>
+    <Root theme={theme} invert={invert} key="123534535">
       <nav className={`navbar navbar-expand-lg navbar-light bg-light norden-navbar px-3 ${activeClass}`}>
         <div className="container">
           <div className="norden-logo order-lg-1">
@@ -72,12 +72,12 @@ const SiteNav = ({
           </button>
           <div className={`order-lg-2 ${navbarCss}`} id="navbarNav">
             <ul className="navbar-nav">
-              {(menu.items || []).map(item => (
+              {(menu.items || []).map((item, i) => (
                 <>
                   {(item.key === "650e3508826e") ?
-                    <li key={item.key} onClick={megamenuOpen} className="nav-item dropdown-nord megamenu-li">
-                      <div key={'list01'} className="nav-link">{item.title} <FaAngleDown /></div>
-                      <div key={'list02'} className={`dropdown-menu megamenu ${megamenuCss}`}>
+                    <li key={i} onClick={megamenuOpen} className="nav-item dropdown-nord megamenu-li">
+                      <div className="nav-link">{item.title} <FaAngleDown /></div>
+                      <div className={`dropdown-menu megamenu ${megamenuCss}`}>
                         <div className="container">
                           <div className="row">
                             <div className="col-lg-3">
@@ -117,10 +117,10 @@ const SiteNav = ({
                               </div>
                             </div>
                             <div className="col-lg-3">
-                              <div key={'qicklink'} className="col-12 mt-5">
+                              <div className="col-12 mt-5">
                                 <div className="h5 pl-4 font-weight-bold">Hurtige links</div>
                                 <Link to="/magento/" className="dropdown-item">Magento </Link>
-                                <Link to="/magento-b2b-og-b2c-webshop/" className="dropdown-item">Something else here</Link>
+                                <Link to="/magento-b2b-og-b2c-webshop/" className="dropdown-item">Magento B2B og B2C</Link>
                                 <Link to="/wordpress-hjemmeside/" className="dropdown-item">Wordpress Hjemmeside</Link>
                                 <Link to="/mobil-app-udvikling/" className="dropdown-item">Mobil App Udvikling</Link>
                                 <Link to="/drupal-udvikling/" className="dropdown-item">Drupal Udvikling</Link>
@@ -131,7 +131,7 @@ const SiteNav = ({
                       </div>
                     </li>
                     :
-                    <li key={item.key} className="nav-item">
+                    <li key={i} className="nav-item">
                       <Link to={item.to} onClick={onCloseMenu} className="nav-link">
                         {item.title}
                       </Link>

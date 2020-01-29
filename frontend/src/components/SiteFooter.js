@@ -93,7 +93,7 @@ const SiteFooter = ({
       <div className="footer-top py-5">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 mb-5">
+            <div className="col-xl-6 col-lg-5 col-md-12 mb-5">
               <img alt={'Norden Soft'} src={sanity.siteExtra[0].footerLogo.asset.url} className="d-inline-block align-top mr-3" />
               <div className="my-3">
                 {typeof sanity.siteExtra[0].footerTextRaw != 'undefined' ? <BlockContent blocks={sanity.siteExtra[0].footerTextRaw} /> : null}
@@ -111,13 +111,13 @@ const SiteFooter = ({
                 </a>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-xl-3 col-lg-4 col-md-6">
               <div className="footer-top-title"> Bankoplysninger </div>
               <div className="mb-3">
                 <BlockContent blocks={sanity.siteExtra[0].footerContactBlockRaw || []} />
               </div>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-xl-3 col-lg-3 col-md-6">
               <div className="footer-top-title"> Find os </div>
               <BlockContent blocks={sanity.siteExtra[0].footerFindBlockRaw || []} />
             </div>

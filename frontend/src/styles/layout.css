@@ -123,6 +123,9 @@ a:hover {
 .navbar-socials a{
   margin: 0 7px;
 }
+.navbar-collapse {
+  justify-content: center;
+}
 @media screen and (max-width: 1200px){
   .norden-navbar{
     min-height: 70px;
@@ -1455,7 +1458,7 @@ a:hover {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 768px){
   .logo-container{
     justify-content: flex-start;
     overflow-x: scroll;
